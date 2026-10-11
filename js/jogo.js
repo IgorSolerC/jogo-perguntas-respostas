@@ -98,6 +98,8 @@
     const banco = window.QUEST_PERGUNTAS || [];
     let grupo = banco.filter((q) => q.categoria === categoria && q.dificuldade === dificuldade);
     if (!grupo.length) grupo = banco.filter((q) => q.categoria === categoria);
+    if (!grupo.length) grupo = banco.filter((q) => q.dificuldade === dificuldade);
+    if (!grupo.length) grupo = banco;
     const chave = categoria + "|" + dificuldade;
     const usadas = p.usadas[chave] || [];
     let livres = grupo.filter((q) => !usadas.includes(q.id));

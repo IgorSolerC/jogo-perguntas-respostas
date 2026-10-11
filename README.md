@@ -49,34 +49,25 @@ Para jogar, basta mandar o link para a família e abrir no celular. Se quiser, u
 
 ## Perguntas
 
-As perguntas ficam em [`data/perguntas.js`](data/perguntas.js): **192 perguntas**, 8 por combinação de assunto e dificuldade.
+As perguntas ficam na pasta [`data/perguntas/`](data/perguntas/), **um arquivo por assunto**, para várias pessoas editarem ao mesmo tempo. O guia de edição está em [`data/perguntas/LEIA-ME.md`](data/perguntas/LEIA-ME.md).
 
-| Assunto | Fácil | Média | Difícil |
-|---|---|---|---|
-| Conhecimentos gerais | 8 | 8 | 8 |
-| Animais e natureza | 8 | 8 | 8 |
-| Ciência e tecnologia | 8 | 8 | 8 |
-| História | 8 | 8 | 8 |
-| Geografia | 8 | 8 | 8 |
-| Cinema e desenhos | 8 | 8 | 8 |
-| Esportes | 8 | 8 | 8 |
-| Curiosidades | 8 | 8 | 8 |
+São **1.431 perguntas**: as do arquivo `perguntas-unificadas.js` (1.320) mais 111 das iniciais que não repetiam nenhuma delas. Cada combinação de assunto e dificuldade tem de 56 a 62.
 
-Cada pergunta tem este formato:
+Cada pergunta é um bloco assim:
 
 ```js
-{
-  "id": "GEO-M-07",
-  "categoria": "geografia",         // geral, natureza, ciencia, historia, geografia, cinema, esportes, curiosidades
-  "dificuldade": "media",           // facil, media, dificil
-  "enunciado": "Que linha imaginária divide a Terra em hemisfério Norte e hemisfério Sul?",
-  "alternativas": ["Trópico de Capricórnio", "Linha do Equador", "Meridiano de Greenwich", "Círculo Polar Ártico"],
-  "correta": 1,                     // posição da alternativa certa, de 0 a 3
-  "explicacao": "A Linha do Equador passa pelo meio do planeta."
-}
+  {
+    id: "GEO-M-07",
+    categoria: "geografia",
+    dificuldade: "media",
+    enunciado: "Que linha imaginária divide a Terra em hemisfério Norte e hemisfério Sul?",
+    alternativas: ["Linha do Equador", "Meridiano de Greenwich", "Trópico de Capricórnio", "Círculo Polar Ártico"],
+    correta: "Linha do Equador",
+    explicacao: "A Linha do Equador passa pelo meio do planeta.",
+  },
 ```
 
-Para adicionar perguntas, copie um bloco, troque o `id` por um novo e edite os campos. As alternativas são embaralhadas na hora de mostrar.
+A resposta certa é escrita por extenso, sem contar posição, e o jogo embaralha as alternativas. Para conferir tudo depois de editar, rode `node testes/validar-perguntas.js`.
 
 Durante a partida, uma pergunta não se repete até que todas da mesma combinação de assunto e dificuldade tenham saído. "Jogar novamente com o mesmo grupo" continua de onde parou, então as perguntas também não se repetem entre partidas seguidas.
 
@@ -88,8 +79,9 @@ css/estilo.css      aparência
 js/arte.js          categorias, cores, avatares e ícones (SVG desenhado)
 js/jogo.js          regras, sorteio de perguntas e salvamento
 js/app.js           telas e interação
+testes/             teste da partida e conferência das perguntas
 js/som.js           sons curtos gerados no navegador
-data/perguntas.js   banco de perguntas
+data/perguntas/     perguntas, um arquivo por assunto
 assets/             fontes e ícone
 DESIGN.md           referência visual
 PRODUCT.md          resumo do produto
