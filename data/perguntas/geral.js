@@ -1498,10 +1498,10 @@ adicionarPerguntas([
     id: "cg-d-045",
     categoria: "geral",
     dificuldade: "dificil",
-    enunciado: "Qual sistema sensorial da orelha interna detecta movimentos e a orientação da cabeça, ajudando no equilíbrio?",
+    enunciado: "Qual sistema do ouvido ajuda a manter o equilíbrio do corpo?",
     alternativas: ["Cerebelo", "Sistema vestibular (orelha interna)", "Tronco encefálico", "Córtex motor"],
     correta: "Sistema vestibular (orelha interna)",
-    explicacao: "O aparelho vestibular situado na orelha interna detecta a aceleração e orientação da cabeça.",
+    explicacao: "O sistema vestibular percebe os movimentos da cabeça e ajuda o corpo a se equilibrar.",
   },
   {
     id: "cg-d-046",
