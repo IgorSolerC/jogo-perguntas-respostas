@@ -794,7 +794,7 @@ adicionarPerguntas([
     id: "cg-m-029",
     categoria: "geral",
     dificuldade: "media",
-    enunciado: "Qual foi a primeira moeda da história moderna do Brasil lançada em 1994?",
+    enunciado: "Qual moeda brasileira entrou em circulação em 1º de julho de 1994?",
     alternativas: ["Cruzado", "Cruzeiro Real", "Real", "Cruzeiro"],
     correta: "Real",
     explicacao: "O Real (R$) foi introduzido em 1º de julho de 1994 no Plano Real.",
