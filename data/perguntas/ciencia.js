@@ -414,10 +414,10 @@ adicionarPerguntas([
     id: "ct-f-046",
     categoria: "ciencia",
     dificuldade: "facil",
-    enunciado: "Qual cientista formulou a lei da gravitação universal, publicada nos Principia em 1687?",
+    enunciado: "Qual cientista é famoso pela história da maçã e pela lei da gravitação universal?",
     alternativas: ["Albert Einstein", "Isaac Newton", "Galileu Galilei", "Nikola Tesla"],
     correta: "Isaac Newton",
-    explicacao: "Isaac Newton descreveu matematicamente a atração gravitacional entre corpos com massa.",
+    explicacao: "Isaac Newton explicou como a gravidade atrai os corpos uns para os outros.",
   },
   {
     id: "ct-f-047",
