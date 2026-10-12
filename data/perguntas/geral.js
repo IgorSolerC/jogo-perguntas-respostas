@@ -1498,7 +1498,7 @@ adicionarPerguntas([
     id: "cg-d-045",
     categoria: "geral",
     dificuldade: "dificil",
-    enunciado: "Qual é o órgão humano responsável pelo equilíbrio corporal e orientação espacial?",
+    enunciado: "Qual sistema sensorial da orelha interna detecta movimentos e a orientação da cabeça, ajudando no equilíbrio?",
     alternativas: ["Cerebelo", "Sistema vestibular (orelha interna)", "Tronco encefálico", "Córtex motor"],
     correta: "Sistema vestibular (orelha interna)",
     explicacao: "O aparelho vestibular situado na orelha interna detecta a aceleração e orientação da cabeça.",
