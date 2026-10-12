@@ -369,10 +369,10 @@ adicionarPerguntas([
     id: "cg-f-041",
     categoria: "geral",
     dificuldade: "facil",
-    enunciado: "Em regiões de clima temperado, em qual estação muitas árvores caducifólias perdem as folhas antes do inverno?",
+    enunciado: "Em qual estação muitas árvores perdem as folhas antes do inverno?",
     alternativas: ["Primavera", "Outono", "Verão", "Inverno"],
     correta: "Outono",
-    explicacao: "No outono, muitas árvores perdem suas folhas para economizar energia para o inverno.",
+    explicacao: "No outono, muitas árvores perdem as folhas e se preparam para o inverno.",
   },
   {
     id: "cg-f-042",
