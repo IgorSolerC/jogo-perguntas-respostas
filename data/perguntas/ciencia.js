@@ -839,10 +839,10 @@ adicionarPerguntas([
     id: "ct-m-035",
     categoria: "ciencia",
     dificuldade: "media",
-    enunciado: "Qual cristalógrafa britânica obteve, com seu aluno Raymond Gosling, a Fotografia 51 de difração de raios X do DNA?",
+    enunciado: "Qual cientista ajudou a revelar a estrutura do DNA com a famosa Fotografia 51?",
     alternativas: ["Marie Curie", "Rosalind Franklin", "Ada Lovelace", "Lise Meitner"],
     correta: "Rosalind Franklin",
-    explicacao: "Rosalind Franklin e Raymond Gosling obtiveram a imagem em 1952; ela foi importante para determinar a estrutura helicoidal do DNA.",
+    explicacao: "Rosalind Franklin e seu aluno Raymond Gosling fizeram essa imagem, importante para entender a forma do DNA.",
   },
   {
     id: "ct-m-036",
