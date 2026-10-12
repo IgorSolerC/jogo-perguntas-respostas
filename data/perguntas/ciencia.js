@@ -776,10 +776,10 @@ adicionarPerguntas([
     id: "ct-m-028",
     categoria: "ciencia",
     dificuldade: "media",
-    enunciado: "Qual é o nome do processo de divisão celular que gera quatro células-filhas haplóides (gametas)?",
+    enunciado: "Como se chama a divisão celular em que uma célula diploide origina quatro células haploides após duas divisões sucessivas?",
     alternativas: ["Mitose", "Meiose", "Fissão binária", "Brotamento"],
     correta: "Meiose",
-    explicacao: "A meiose reduz o número de cromossomos pela metade para produzir óvulos e espermatozoides.",
+    explicacao: "A meiose reduz à metade o número de conjuntos de cromossomos; suas células resultantes podem originar gametas ou esporos.",
   },
   {
     id: "ct-m-029",
