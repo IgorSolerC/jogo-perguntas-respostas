@@ -1426,10 +1426,10 @@ adicionarPerguntas([
     id: "an-d-040",
     categoria: "natureza",
     dificuldade: "dificil",
-    enunciado: "Qual mamífero carnívoro aquático habita o rio Amazonas e pode medir até 1,8 metro de comprimento?",
-    alternativas: ["Ariranha", "Lutra-neotropical", "Peixe-boi", "Boto-cor-de-rosa"],
+    enunciado: "Qual lontra da Amazônia também é conhecida como lontra-gigante?",
+    alternativas: ["Ariranha", "Lontra-neotropical", "Peixe-boi", "Boto-cor-de-rosa"],
     correta: "Ariranha",
-    explicacao: "A ariranha é uma das maiores espécies de lontra e vive em grupos familiares em rios de bacias sul-americanas.",
+    explicacao: "A ariranha é uma grande lontra que vive em grupos nos rios sul-americanos.",
   },
   {
     id: "an-d-041",
