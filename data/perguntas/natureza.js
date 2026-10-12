@@ -369,10 +369,10 @@ adicionarPerguntas([
     id: "an-f-041",
     categoria: "natureza",
     dificuldade: "facil",
-    enunciado: "Qual destes mamíferos aquáticos herbívoros pertence à ordem Sirenia?",
+    enunciado: "Qual destes mamíferos aquáticos se alimenta de plantas?",
     alternativas: ["Peixe-boi", "Golfinho", "Tubarão", "Foca-monja"],
     correta: "Peixe-boi",
-    explicacao: "O peixe-boi é um mamífero aquático herbívoro nativo de águas tropicais.",
+    explicacao: "O peixe-boi se alimenta de plantas aquáticas.",
   },
   {
     id: "an-f-042",
