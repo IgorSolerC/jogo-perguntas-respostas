@@ -153,7 +153,8 @@ button { cursor: pointer; touch-action: manipulation; }
 }
 .btn-sec:hover { background: rgba(255, 255, 255, 0.18); }
 .tela-papel .btn-sec,
-.folha .btn-sec {
+.folha .btn-sec,
+.rodape-fim .btn-sec {
   background: var(--papel);
   color: var(--tinta);
   box-shadow: inset 0 0 0 2px var(--tinta-2);
@@ -175,6 +176,17 @@ button { cursor: pointer; touch-action: manipulation; }
 }
 .btn-icone .ic { width: 26px; height: 26px; }
 .btn-icone:hover { background: rgba(255, 255, 255, 0.2); }
+.btn-placar {
+  height: 48px; padding: 0 16px 0 12px;
+  display: inline-flex; align-items: center; gap: 8px; flex: none;
+  border: 0; border-radius: 14px;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--sobre-lona);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.35);
+  font-weight: 700; font-size: 1.05rem;
+}
+.btn-placar .ic { width: 24px; height: 24px; }
+.btn-placar:hover { background: rgba(255, 255, 255, 0.2); }
 .btn-texto {
   border: 0; background: none; padding: 8px 4px;
   color: inherit; font-weight: 700; text-decoration: underline; text-underline-offset: 4px;
@@ -262,7 +274,6 @@ button { cursor: pointer; touch-action: manipulation; }
   margin-bottom: 8px;
 }
 .dica { color: var(--tinta-2); font-size: 1.02rem; }
-.tela-papel .rodape .dica { text-align: center; }
 .aviso-erro { color: var(--erro); font-weight: 700; margin-top: 12px; }
 
 /* Passo 1: contador */
@@ -398,7 +409,7 @@ button { cursor: pointer; touch-action: manipulation; }
 .etiqueta { font-size: 0.9rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; background: #fff; color: var(--tinta-2); box-shadow: inset 0 0 0 1.5px var(--linha); white-space: nowrap; }
 @keyframes entra { from { transform: translateY(10px); opacity: 0.4; } to { transform: none; opacity: 1; } }
 .regras { margin-top: 26px; }
-.regras h3 { font-family: var(--letreiro); font-weight: 400; font-size: 1.5rem; margin-bottom: 10px; }
+.regras h2 { font-family: var(--letreiro); font-weight: 400; font-size: 1.5rem; margin-bottom: 10px; }
 .regras ol { margin: 0; padding: 0; list-style: none; counter-reset: r; display: grid; gap: 10px; }
 .regras li { counter-increment: r; display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: start; }
 .regras li::before {
@@ -410,10 +421,10 @@ button { cursor: pointer; touch-action: manipulation; }
 
 /* ───────── passe o celular ───────── */
 .tela-passe { overflow: hidden; }
-.passe-topo { position: absolute; top: calc(84px + env(safe-area-inset-top)); right: 16px; z-index: 3; display: flex; gap: 8px; }
+.passe-topo { display: flex; justify-content: flex-end; padding: 10px 16px 0; position: relative; z-index: 3; }
 .passe-centro {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  text-align: center; gap: 14px; padding: 24px 20px;
+  text-align: center; gap: 12px; padding: 4px 20px 16px;
 }
 .passe-pre { font-size: 1.3rem; font-weight: 700; color: var(--sobre-lona-2); }
 .passe-nome {
@@ -421,8 +432,31 @@ button { cursor: pointer; touch-action: manipulation; }
   font-size: clamp(2.8rem, 15vw, 4.2rem); line-height: 1;
   overflow-wrap: anywhere; text-wrap: balance;
 }
-.passe-cor { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--sobre-lona-2); }
-.passe-cor i { width: 16px; height: 16px; border-radius: 50%; background: var(--cor); box-shadow: 0 0 0 2px #fff; }
+.passe-cor { font-weight: 700; color: var(--sobre-lona-2); }
+
+/* Corrida: todos os peões numa trilha, na troca de turno */
+.corrida { width: min(100%, 380px); margin-top: 10px; }
+.corrida-pista { position: relative; height: 84px; }
+.corrida-pista::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 50%;
+  height: 8px; margin-top: -4px; border-radius: 4px;
+  background: var(--lona-escura); box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.28);
+}
+.corrida .grupo { position: absolute; left: calc(var(--x) * (100% - 34px) / 100); }
+.corrida .grupo.f0 { bottom: calc(50% + 7px); }
+.corrida .grupo.f1 { top: calc(50% + 7px); }
+.corrida .ficha { --tam: 34px; }
+.corrida .ficha.ativa { animation: none; z-index: 2; }
+.corrida .qtd {
+  position: absolute; right: -9px; bottom: -6px; z-index: 3;
+  min-width: 24px; height: 22px; padding: 0 5px; border-radius: 11px;
+  display: grid; place-items: center;
+  background: var(--tinta); color: #fff; font-size: 0.8rem; font-weight: 700; line-height: 1;
+  box-shadow: 0 0 0 2px #fff;
+}
+.corrida-pontas { display: flex; justify-content: space-between; margin-top: 2px; font-size: 0.95rem; font-weight: 700; color: var(--sobre-lona-2); }
+.corrida-pontas span { display: inline-flex; align-items: center; gap: 6px; }
+.corrida-pontas .ic { width: 18px; height: 18px; }
 .toldo-animado .ficha-gigante { animation: ficha-chega 0.7s var(--saida) both; }
 @keyframes ficha-chega { from { transform: translateY(-24px) scale(0.86); } to { transform: none; } }
 
@@ -437,7 +471,7 @@ button { cursor: pointer; touch-action: manipulation; }
 .barra-jogo .ficha { --tam: 44px; }
 .barra-jogo .quem { flex: 1; min-width: 0; line-height: 1.15; }
 .barra-jogo .quem strong { display: block; font-size: 1.2rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.barra-jogo .quem span { font-size: 0.95rem; color: var(--sobre-lona-2); }
+.barra-jogo .quem span { display: block; font-size: 1rem; color: var(--sobre-lona-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /* ───────── tabuleiro ───────── */
 .area-tabuleiro { padding: 6px 12px 12px; }
@@ -468,8 +502,10 @@ button { cursor: pointer; touch-action: manipulation; }
   padding-left: 30px;
 }
 .casa-ponta .nome-ponta { flex: none; }
-.casa-ponta .fichas { position: static; flex: 1; display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-end; inset: auto; }
+.casa-ponta .fichas { flex: 1; display: flex; justify-content: flex-end; align-items: center; }
+.casa-ponta .fichas > * + * { margin-left: -8px; }
 .casa-ponta .ficha { --tam: 34px; }
+.casa-ponta .mais { width: 34px; height: 34px; font-size: 0.9rem; }
 
 .trilha { position: relative; display: grid; grid-template-columns: repeat(var(--cols), 1fr); }
 .trilha-linha { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
@@ -485,30 +521,32 @@ button { cursor: pointer; touch-action: manipulation; }
   background: var(--fundo);
   color: var(--forte);
   box-shadow: 0 3px 0 color-mix(in srgb, var(--forte) 35%, #0b1a4d);
+  container-type: inline-size;
 }
-.casa-num { position: absolute; top: 3px; left: 7px; font-weight: 700; font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+.casa-num { position: absolute; top: 3px; left: 7px; font-weight: 700; font-size: 0.9rem; line-height: 1.2; font-variant-numeric: tabular-nums; }
 .casa-ic { position: absolute; inset: 14px 0 0; display: grid; place-items: center; }
 .casa-ic .ic { width: 40%; height: 40%; }
 .casa.ocupada .casa-ic { inset: 4px 5px auto auto; }
 .casa.ocupada .casa-ic .ic { width: 17px; height: 17px; }
-.fichas { position: absolute; inset: 19px 3px 3px; display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 2px; }
-.casa .ficha { --tam: auto; width: var(--f, 62%); height: auto; aspect-ratio: 1; border-width: 2px; }
-.fichas.n1 { --f: 70%; }
-.fichas.n2 { --f: 46%; }
-.fichas.n4 { --f: 44%; }
-.fichas.n9 { --f: 26%; }
-.casa:has(.fichas.n9) .casa-ic, .casa:has(.fichas.n12) .casa-ic { display: none; }
-.fichas.n12 { --f: 23%; }
-.casa .fichas.n9 .ficha, .casa .fichas.n12 .ficha { border-width: 2px; box-shadow: none; }
+/* Peões ficam na metade de baixo, sem cobrir o número; no máximo três à vista. */
+.casa .fichas { position: absolute; left: 0; right: 0; bottom: 7%; height: 52%; display: flex; justify-content: center; align-items: center; }
+.casa .fichas > * + * { margin-left: -16cqw; }
+.casa .ficha { --tam: auto; height: 100%; width: auto; aspect-ratio: 1; border-width: 2px; }
+.mais {
+  flex: none; display: grid; place-items: center; border-radius: 50%;
+  background: var(--tinta); color: #fff; font-weight: 700; line-height: 1;
+  box-shadow: 0 0 0 2px #fff;
+}
+.casa .mais { height: 100%; aspect-ratio: 1; font-size: 22cqw; }
 
 .ficha.ativa { box-shadow: 0 0 0 2px var(--tinta), 0 0 0 5px var(--fluor); position: relative; z-index: 1; animation: pulsa 1.4s ease-in-out infinite; }
 @keyframes pulsa { 50% { transform: scale(1.1); } }
 .casa.atual, .casa-ponta.atual { outline: 4px solid var(--fluor); outline-offset: 2px; }
 .casa.destino, .casa-ponta.destino { outline: 4px dashed #fff; outline-offset: 2px; }
 .tag-destino {
-  position: absolute; left: 50%; top: -14px; transform: translateX(-50%);
+  position: absolute; left: 50%; top: -19px; transform: translateX(-50%);
   background: var(--fluor); color: var(--tinta);
-  font-family: var(--texto); font-weight: 700; font-size: 0.75rem; letter-spacing: 0.02em;
+  font-family: var(--texto); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.02em;
   padding: 2px 8px; border-radius: 999px; white-space: nowrap; z-index: 2;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -595,18 +633,31 @@ button { cursor: pointer; touch-action: manipulation; }
 .alt:has(input:checked) .letra { background: var(--tinta); color: #fff; box-shadow: none; }
 .alt:has(input:focus-visible) { outline: 3px solid var(--lona); outline-offset: 3px; }
 
-.cronometro { display: flex; align-items: center; gap: 8px; font-weight: 700; font-variant-numeric: tabular-nums; }
-.cronometro .ic { width: 22px; height: 22px; }
-.cron-barra { height: 8px; background: rgba(255, 255, 255, 0.25); }
-.cron-barra i { display: block; height: 100%; width: calc(var(--p, 1) * 100%); background: var(--fluor); transition: width 0.25s linear; }
-.cron-barra.urgente i { background: #ff8a7a; }
-.cronometro.pausado span::after { content: " (pausado)"; font-weight: 400; }
+/* Cronômetro: ao lado do botão de confirmar, onde o olho já está. O anel esvazia. */
+.rodape.com-cron { grid-template-columns: 76px 1fr; }
+.cronometro {
+  --p: 1;
+  position: relative; isolation: isolate;
+  display: grid; place-content: center; justify-items: center; gap: 2px;
+  border-radius: 20px;
+  background: conic-gradient(var(--lona) calc(var(--p) * 1turn), var(--linha) 0);
+  color: var(--tinta); line-height: 1; font-variant-numeric: tabular-nums;
+}
+.cronometro::before { content: ""; position: absolute; inset: 6px; border-radius: 15px; background: var(--papel); z-index: -1; }
+.cronometro span { font-family: var(--letreiro); font-size: 2rem; }
+.cronometro small { font-size: 0.85rem; font-weight: 700; color: var(--tinta-2); }
+.cronometro.urgente { background: conic-gradient(var(--erro) calc(var(--p) * 1turn), var(--erro-fundo) 0); color: var(--erro); }
+.cronometro.urgente span { animation: tique 1s ease-in-out infinite; }
+@keyframes tique { 50% { transform: scale(1.18); } }
+.cronometro.pausado small { display: none; }
+.cronometro.pausado::after { content: "pausado"; font-size: 0.8rem; font-weight: 700; color: var(--tinta-2); }
 
 .veredito {
-  display: flex; align-items: center; gap: 14px;
-  padding: 18px 16px;
+  display: grid; gap: 14px;
+  padding: 18px 16px 16px;
   color: #fff;
 }
+.veredito-topo { display: flex; align-items: center; gap: 14px; }
 .veredito.ok { background: var(--acerto); }
 .veredito.erro { background: var(--erro); }
 .veredito .selo { width: 58px; height: 58px; border-radius: 50%; background: #fff; display: grid; place-items: center; flex: none; animation: carimbo 0.45s var(--saida) both; }
@@ -616,12 +667,36 @@ button { cursor: pointer; touch-action: manipulation; }
 .veredito h1 { font-family: var(--letreiro); font-weight: 400; font-size: 2.3rem; line-height: 1; }
 .veredito p { font-weight: 700; margin-top: 4px; }
 @keyframes carimbo { from { transform: scale(1.5) rotate(-12deg); } to { transform: none; } }
-.movimento { font-size: 1.2rem; font-weight: 700; padding: 16px 16px 0; }
-.revisao { padding: 12px 16px 0; display: grid; gap: 8px; }
+
+/* Trecho percorrido, dentro do veredito */
+.percurso { position: relative; display: grid; grid-template-columns: repeat(var(--n), 1fr); width: min(100%, calc(var(--n) * 66px)); }
+.percurso .cel {
+  position: relative; aspect-ratio: 1; margin: 3px;
+  display: grid; place-items: center;
+  border-radius: 12px;
+  background: var(--fundo); color: var(--forte);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.22);
+}
+.percurso .cel b { position: absolute; top: 2px; left: 6px; font-size: 0.85rem; }
+.percurso .cel .ic { width: 42%; height: 42%; }
+.percurso .cel.largada { background: #fff; color: var(--tinta); }
+.percurso .cel.chegada { background: var(--fluor); color: var(--tinta); }
+.percurso .cel.falhou { background: transparent; color: rgba(255, 255, 255, 0.75); box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5); }
+.percurso .peao {
+  position: absolute; top: 0; bottom: 0; left: 0;
+  width: calc(100% / var(--n));
+  display: grid; place-items: center;
+  transform: translateX(calc(var(--i) * 100%));
+  transition: transform 0.26s var(--saida);
+  z-index: 1;
+}
+.percurso .ficha { width: 66%; height: auto; max-width: 46px; aspect-ratio: 1; border-width: 3px; box-shadow: 0 0 0 2px #fff, var(--sombra-leve); }
+
+.revisao { padding: 16px 16px 0; display: grid; gap: 8px; }
 .revisao .q { color: var(--tinta-2); font-weight: 700; }
 .rev-alt { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 12px; background: var(--papel-2); font-weight: 700; color: var(--tinta-2); }
 .rev-alt .ic { width: 22px; height: 22px; stroke-width: 3; }
-.rev-alt .rotulo { margin-left: auto; font-size: 0.85rem; white-space: nowrap; }
+.rev-alt .rotulo { margin-left: auto; font-size: 0.9rem; white-space: nowrap; }
 .rev-alt.certa { background: var(--acerto-fundo); color: #0f5c33; box-shadow: inset 0 0 0 2px var(--acerto); }
 .rev-alt.marcada { background: var(--erro-fundo); color: #8f1c16; box-shadow: inset 0 0 0 2px var(--erro); }
 .explicacao { margin: 14px 16px 0; padding: 14px 16px; border-radius: 16px; background: #f3f5ff; box-shadow: inset 0 0 0 2px #dfe5fb; font-size: 1.1rem; }
@@ -647,6 +722,8 @@ button { cursor: pointer; touch-action: manipulation; }
 .classif .quem small { display: block; font-weight: 400; color: var(--tinta-2); font-size: 0.9rem; }
 .classif tr.campeao td { background: var(--fluor-suave); }
 .classif td.num { font-weight: 700; font-size: 1.15rem; }
+/* Os botões vêm depois da classificação, para ninguém perder a própria colocação. */
+.rodape-fim { position: static; background: var(--papel); }
 
 /* ───────── folhas (menu, ficha, casa) ───────── */
 .fundo-folha {
@@ -699,8 +776,12 @@ button { cursor: pointer; touch-action: manipulation; }
 .placar-lista .info { flex: 1; min-width: 0; }
 .placar-lista .info strong { display: block; font-size: 1.1rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .placar-lista .info span { color: var(--tinta-2); font-size: 0.95rem; }
-.placar-lista .ac { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.15; }
-.placar-lista .ac small { display: block; font-weight: 400; color: var(--tinta-2); font-size: 0.82rem; }
+.placar-lista .ac { text-align: center; font-weight: 700; font-size: 1.35rem; font-variant-numeric: tabular-nums; line-height: 1.05; }
+.placar-lista .ac small { display: block; font-weight: 400; color: var(--tinta-2); font-size: 0.9rem; }
+.placar-dica { margin: -6px 0 12px; }
+.tag-vez { font-weight: 700; color: var(--tinta); }
+.progresso-jog { display: block; height: 6px; margin-top: 6px; border-radius: 3px; background: var(--linha); overflow: hidden; }
+.progresso-jog i { display: block; height: 100%; border-radius: 3px; background: var(--lona); }
 .menu-acoes { display: grid; gap: 10px; margin-top: 16px; }
 .folha .tabuleiro { margin-top: 4px; }
 .folha .legenda { color: var(--tinta-2); }
@@ -711,6 +792,25 @@ button { cursor: pointer; touch-action: manipulation; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+
+/* Celulares baixos: a pergunta e as quatro alternativas cabem sem rolar. */
+@media (max-height: 700px) {
+  .barra-jogo { padding-top: calc(6px + env(safe-area-inset-top)); padding-bottom: 6px; }
+  .faixa-cat { padding: 8px 16px 10px; }
+  .faixa-cat .cat { font-size: 1.25rem; }
+  .corpo-pergunta { padding-top: 12px; }
+  .enunciado { font-size: 1.3rem; margin: 6px 0 12px; }
+  .alternativas { gap: 8px; }
+  .alt { min-height: 54px; padding: 8px 12px; }
+  .btn-gigante { min-height: 64px; font-size: 1.15rem; }
+  .rodape.com-cron { grid-template-columns: 64px 1fr; }
+  .cronometro span { font-size: 1.7rem; }
+  .ficha-gigante { --tam: 104px; }
+  .passe-centro { gap: 8px; padding-bottom: 8px; }
+  .corrida-pista { height: 72px; }
+  .corrida .ficha { --tam: 30px; }
+  .corrida .grupo { left: calc(var(--x) * (100% - 30px) / 100); }
 }
 
 @media (min-width: 600px) {

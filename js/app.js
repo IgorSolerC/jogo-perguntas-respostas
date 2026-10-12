@@ -26,7 +26,7 @@
     retomando: false,
     rolando: false,
     folha: null, // { tipo: 'menu' | 'ficha' | 'casa' | 'tabuleiro', ... }
-    anim: null, // { id, pos } enquanto um peão anda
+    anim: null, // { passos } entre a resposta certa e o peão começar a andar
     animarPasse: true,
   };
 
@@ -64,6 +64,29 @@
   function botaoSom(classe) {
     const l = Som.ligado;
     return `<button class="btn-icone ${classe || ""}" data-acao="som" aria-pressed="${l}" aria-label="${l ? "Desligar sons" : "Ligar sons"}">${icone(l ? "somLigado" : "somDesligado")}</button>`;
+  }
+
+  // Na partida, o som fica dentro do menu; o botão do canto abre o placar.
+  function botaoPlacar() {
+    return `<button class="btn-placar" data-acao="menu">${icone("placar")}<span>Placar</span></button>`;
+  }
+
+  // Peões de uma casa: quem joga fica por cima; o excesso vira "+N".
+  function pilhaFichas(lista, destaque, limite) {
+    const ord = lista.slice().sort((a, b) => (a.id === destaque) - (b.id === destaque));
+    const vis = ord.length > limite ? ord.slice(-(limite - 1)) : ord;
+    const mais = ord.length - vis.length;
+    return (mais ? `<span class="mais">+${mais}</span>` : "") + vis.map((j) => ficha(j, j.id === destaque ? "ativa" : "")).join("");
+  }
+
+  function regrasHtml() {
+    return `<ol class="regras-lista">
+      <li>Na sua vez, lance o dado.</li>
+      <li>O número mostra a casa que você vai tentar alcançar.</li>
+      <li>Responda a pergunta do assunto dessa casa, no seu nível.</li>
+      <li>Acertou? Avança até a casa. Errou? Fica onde está.</li>
+      <li>Não precisa tirar o número exato: quem passaria do fim tenta a chegada. A pergunta da chegada pode ser de qualquer assunto, e quem acertar primeiro vence!</li>
+    </ol>`;
   }
 
   // ───────── rascunho da configuração ─────────
@@ -173,7 +196,7 @@
               ${ficha(j)}<span class="lapis" aria-hidden="true">${icone("lapis")}</span>
             </button>
             <label class="campo-nome"><span class="sr">Nome do participante ${i + 1}</span>
-              <input type="text" value="${esc(j.nome)}" data-nome="${i}" maxlength="16" autocomplete="off" autocapitalize="words" enterkeyhint="next" placeholder="Participante ${i + 1}">
+              <input type="text" value="${esc(j.nome)}" data-nome="${i}" maxlength="20" autocomplete="off" autocapitalize="words" enterkeyhint="next" placeholder="Participante ${i + 1}">
             </label>
           </div>`).join("")}
         </div>`;
@@ -256,14 +279,8 @@
         <h1 class="titulo-passo" tabindex="-1">Ordem sorteada</h1>
         <ol class="ordem-lista" aria-label="Ordem dos turnos">${lista}</ol>
         <section class="regras" aria-labelledby="regras-t">
-          <h3 id="regras-t">Como jogar</h3>
-          <ol>
-            <li>Na sua vez, lance o dado.</li>
-            <li>O número mostra a casa que você vai tentar alcançar.</li>
-            <li>Responda a pergunta do assunto dessa casa, no seu nível.</li>
-            <li>Acertou? Avança até a casa. Errou? Fica onde está.</li>
-            <li>Não precisa tirar o número exato: quem passaria do fim tenta a chegada. A pergunta da chegada pode ser de qualquer assunto, e quem acertar primeiro vence!</li>
-          </ol>
+          <h2 id="regras-t">Como jogar</h2>
+          ${regrasHtml()}
         </section>
       </main>
       <footer class="rodape">
@@ -287,12 +304,13 @@
     const retomando = ui.retomando && partida.turno.fase !== "passe";
     return `<div class="tela tela-passe ${ui.animarPasse ? "toldo-animado" : ""}" style="--cor:${c.hex}">
       <div class="toldo-wrap"><div class="toldo"></div></div>
-      <div class="passe-topo">${botaoSom()}<button class="btn-icone" data-acao="menu" aria-label="Placar e opções">${icone("menu")}</button></div>
+      <div class="passe-topo">${botaoPlacar()}</div>
       <main class="passe-centro">
         <p class="passe-pre">${retomando ? "Partida recuperada. " : ""}Passe o celular para</p>
         ${ficha(j, "ficha-gigante")}
         <h1 class="passe-nome" tabindex="-1">${esc(j.nome)}</h1>
-        <p class="passe-cor"><i aria-hidden="true"></i>${c.nome} · ${dif(j.dificuldade).nome}</p>
+        <p class="passe-cor">${dif(j.dificuldade).nome} · ${ondeEsta(partida, j.posicao)}</p>
+        ${corridaHtml(partida, j.id)}
       </main>
       <footer class="rodape">
         <button class="btn btn-prim btn-gigante" data-acao="iniciar-turno">${retomando ? "Estou com o celular — continuar meu turno" : "Estou com o celular — começar meu turno"}</button>
@@ -300,13 +318,36 @@
     </div>`;
   }
 
-  function barraJogo(j) {
-    const pos = ui.anim && ui.anim.id === j.id ? ui.anim.pos : j.posicao;
+  // A corrida: todos os peões numa trilha só, para a família ver quem está na frente.
+  function corridaHtml(p, idVez) {
+    const fim = J.ultimaCasa(p);
+    const grupos = new Map();
+    p.jogadores.forEach((j) => {
+      const k = Math.min(j.posicao, fim);
+      if (!grupos.has(k)) grupos.set(k, []);
+      grupos.get(k).push(j);
+    });
+    // Um peão por casa (o de quem joga, se estiver nela) e "+N" para os outros.
+    const ultimo = [-100, -100]; // última posição usada em cada faixa (acima e abaixo da trilha)
+    const itens = [...grupos.entries()].sort((a, b) => a[0] - b[0]).map(([pos, lista]) => {
+      const x = (pos / fim) * 100;
+      const faixa = x - ultimo[0] >= 15 ? 0 : x - ultimo[1] >= 15 ? 1 : ultimo[0] <= ultimo[1] ? 0 : 1;
+      ultimo[faixa] = x;
+      const principal = lista.find((j) => j.id === idVez) || lista[0];
+      return `<div class="grupo f${faixa}" style="--x:${x.toFixed(2)}">${ficha(principal, principal.id === idVez ? "ativa" : "")}${lista.length > 1 ? `<span class="qtd">+${lista.length - 1}</span>` : ""}</div>`;
+    }).join("");
+    const resumo = J.classificacao(p).map((j) => `${j.nome}: ${ondeEsta(p, j.posicao).toLowerCase()}`).join("; ");
+    return `<div class="corrida" role="img" aria-label="Corrida. ${esc(resumo)}">
+      <div class="corrida-pista">${itens}</div>
+      <div class="corrida-pontas" aria-hidden="true"><span>${icone("largada")}Largada</span><span>Chegada${icone("chegada")}</span></div>
+    </div>`;
+  }
+
+  function barraJogo(j, status) {
     return `<header class="barra-jogo">
       ${ficha(j)}
-      <div class="quem"><strong>${esc(j.nome)}</strong><span>${ondeEsta(partida, pos)} · ${j.acertos} ${j.acertos === 1 ? "acerto" : "acertos"}</span></div>
-      ${botaoSom()}
-      <button class="btn-icone" data-acao="menu" aria-label="Placar e opções">${icone("menu")}</button>
+      <div class="quem"><strong>${esc(j.nome)}</strong>${status ? `<span>${status}</span>` : ""}</div>
+      ${botaoPlacar()}
     </header>`;
   }
 
@@ -317,12 +358,9 @@
     const fim = J.ultimaCasa(p);
     const meio = fim - 1; // casas 1..fim-1
     const linhas = Math.ceil(meio / cols);
-    const posDe = (j) => (ui.anim && ui.anim.id === j.id ? ui.anim.pos : j.posicao);
-    const naCasa = (i) => p.jogadores.filter((j) => posDe(j) === i);
-    const classeN = (n) => (n <= 1 ? "n1" : n === 2 ? "n2" : n <= 4 ? "n4" : n <= 9 ? "n9" : "n12");
-    const fichasHtml = (lista) => lista.map((j) => ficha(j, j.id === opcoes.destaque ? "ativa" : "")).join("");
+    const naCasa = (i) => p.jogadores.filter((j) => j.posicao === i);
     const rotuloQuem = (lista) => (lista.length ? ", com " + lista.map((j) => j.nome).join(", ") : "");
-    const atualPos = opcoes.destaque ? posDe(J.jogador(p, opcoes.destaque)) : -1;
+    const atualPos = opcoes.destaque ? J.jogador(p, opcoes.destaque).posicao : -1;
 
     const coord = (i) => {
       const k = i - 1;
@@ -338,7 +376,7 @@
       const nome = tipo === "largada" ? "Largada" : "Chegada";
       return `<button class="${cls}" data-acao="ver-casa" data-casa="${i}" data-casa-n="${i}" aria-label="${nome}${esc(rotuloQuem(lista))}">
         ${icone(tipo)}<span class="nome-ponta">${nome}</span>
-        <span class="fichas">${fichasHtml(lista)}</span>
+        <span class="fichas">${pilhaFichas(lista, opcoes.destaque, 6)}</span>
         ${i === opcoes.destino ? `<span class="tag-destino">Destino</span>` : ""}
       </button>`;
     };
@@ -355,7 +393,7 @@
       casas += `<button class="${cls}" style="grid-row:${r + 1};grid-column:${c + 1};${varsCat(ct)}" data-acao="ver-casa" data-casa="${i}" data-casa-n="${i}" aria-label="Casa ${i}, ${ct.nome}${esc(rotuloQuem(lista))}">
         <span class="casa-num" aria-hidden="true">${i}</span>
         <span class="casa-ic" aria-hidden="true">${icone(ct.id)}</span>
-        ${lista.length ? `<span class="fichas ${classeN(lista.length)}">${fichasHtml(lista)}</span>` : ""}
+        ${lista.length ? `<span class="fichas">${pilhaFichas(lista, opcoes.destaque, 3)}</span>` : ""}
         ${i === opcoes.destino ? `<span class="tag-destino">Destino</span>` : ""}
       </button>`;
     }
@@ -381,26 +419,23 @@
     const t = p.turno;
     let painel;
     if (t.fase === "pronto" && !ui.rolando) {
-      painel = `<p class="painel-texto">Sua vez, <strong>${esc(j.nome)}</strong>! Lance o dado para ver qual casa você vai tentar alcançar.</p>
-        <button class="btn btn-prim btn-gigante" data-acao="lancar">${icone("dado")}Lançar dado</button>`;
+      painel = `<button class="btn btn-prim btn-gigante" data-acao="lancar">${icone("dado")}Lançar dado</button>`;
     } else if (ui.rolando) {
       painel = `<div class="dado-rolando" aria-label="Dado rolando">${dadoSvg(1 + Math.floor(Math.random() * 6))}</div>
         <button class="btn btn-prim btn-gigante" disabled>Rolando…</button>`;
     } else {
       const c = cat(t.categoria);
-      const destinoTxt = t.chegada
-        ? `<span>Destino: <strong>Chegada!</strong></span><span class="chip-cat" style="${varsCat(c)}">${icone(c.id)}${c.nome}</span>`
-        : `<span>Destino: casa ${t.destino}</span><span class="chip-cat" style="${varsCat(c)}">${icone(c.id)}${c.nome}</span>`;
       painel = `<div class="resultado-dado">${dadoSvg(t.dado)}
-          <div><p class="tirou">Você tirou ${t.dado}</p><p class="destino-linha">${destinoTxt}</p></div>
+          <div><p class="tirou">Você tirou ${t.dado}</p>
+          <p class="destino-linha"><span>Destino: ${t.chegada ? "<strong>Chegada!</strong>" : "casa " + t.destino}</span><span class="chip-cat" style="${varsCat(c)}">${icone(c.id)}${c.nome}</span></p></div>
         </div>
-        ${t.chegada ? `<p class="painel-texto">Acerte esta pergunta para vencer! Na chegada vale qualquer assunto.</p>` : ""}
+        ${t.chegada ? `<p class="painel-texto">Acerte esta pergunta para vencer!</p>` : ""}
         <button class="btn btn-prim btn-gigante" data-acao="ver-pergunta">Ver pergunta${icone("seta")}</button>`;
     }
     const destino = t.fase === "dado" && !ui.rolando ? t.destino : undefined;
     return `<div class="tela">
-      ${barraJogo(j)}
-      <main class="area-tabuleiro"><h1 class="sr" tabindex="-1">Vez de ${esc(j.nome)}</h1>${tabuleiroHtml(p, { destaque: j.id, destino })}</main>
+      ${barraJogo(j, ondeEsta(p, j.posicao))}
+      <main class="area-tabuleiro"><h1 class="sr" tabindex="-1">Vez de ${esc(j.nome)}</h1>${tabuleiroHtml(p, { destaque: j.id, destino, legenda: false })}</main>
       <footer class="painel">${painel}</footer>
     </div>`;
   }
@@ -421,7 +456,7 @@
     const t = p.turno;
     const q = t.pergunta;
     const cron = p.config.tempo
-      ? `<div class="cron-barra" aria-hidden="true"><i></i></div>`
+      ? `<div class="cronometro" role="timer" aria-label="Segundos restantes"><span data-cron>${Math.ceil(t.restanteMs / 1000)}</span><small>seg</small></div>`
       : "";
     const trajeto = t.chegada
       ? `Valendo a <strong>chegada</strong> e a vitória`
@@ -429,12 +464,8 @@
     return `<div class="tela tela-papel">
       ${barraJogo(j)}
       ${cabecaPergunta(t)}
-      ${cron}
       <main class="corpo-pergunta">
-        <div class="trajeto">
-          ${trajeto}
-          ${p.config.tempo ? `<span class="cronometro" role="timer" style="margin-left:auto">${icone("relogio")}<span data-cron>${Math.ceil(t.restanteMs / 1000)} s</span></span>` : ""}
-        </div>
+        <p class="trajeto">${trajeto}</p>
         <h1 class="enunciado" id="enunciado" tabindex="-1">${esc(q.enunciado)}</h1>
         <fieldset class="alternativas" aria-labelledby="enunciado">
           ${q.alternativas.map((a, i) => `<label class="alt">
@@ -443,10 +474,30 @@
           </label>`).join("")}
         </fieldset>
       </main>
-      <footer class="rodape">
+      <footer class="rodape ${cron ? "com-cron" : ""}">
+        ${cron}
         <button class="btn btn-prim btn-gigante" data-acao="confirmar" ${t.escolha === null ? "disabled" : ""}>Confirmar resposta</button>
-        <p class="dica">Dá para trocar a escolha antes de confirmar.</p>
       </footer>
+    </div>`;
+  }
+
+  // Trecho do tabuleiro entre a origem e o destino. No acerto o peão anda até o fim;
+  // no erro ele fica na origem e o resto do trecho aparece apagado.
+  function percursoHtml(p, j, t, correta) {
+    const fim = J.ultimaCasa(p);
+    const cels = [];
+    for (let i = t.origem; i <= t.destino; i++) {
+      const tipo = i <= 0 ? "largada" : i >= fim ? "chegada" : "";
+      const ct = tipo ? null : cat(p.casas[i].categoria);
+      cels.push(`<span class="cel ${tipo} ${!correta && i > t.origem ? "falhou" : ""}" ${ct ? `style="${varsCat(ct)}"` : ""}>
+        ${tipo ? icone(tipo) : `<b>${i}</b>${icone(ct.id)}`}
+      </span>`);
+    }
+    const n = cels.length;
+    const i = correta && !ui.anim ? n - 1 : 0;
+    return `<div class="percurso" style="--n:${n}" aria-hidden="true">
+      ${cels.join("")}
+      <span class="peao" style="--i:${i}">${ficha(j)}</span>
     </div>`;
   }
 
@@ -457,38 +508,37 @@
     const q = t.pergunta;
     const r = t.resposta;
     const venceu = p.vencedor === j.id;
-    let titulo, sub, mov;
+    let titulo, sub;
     if (r.correta) {
       titulo = venceu ? "Venceu!" : "Acertou!";
-      sub = venceu ? "Resposta certa na chegada." : "Resposta certa.";
-      mov = venceu
-        ? `${esc(j.nome)} chegou ao fim do percurso e venceu a partida!`
-        : `Você avançou de ${nomeCasa(p, t.origem)} para a casa ${t.destino}.`;
+      sub = venceu ? `${esc(j.nome)} chegou ao fim e venceu a partida!` : `Você avançou para a casa ${t.destino}.`;
     } else {
       titulo = r.tempoEsgotado ? "Tempo esgotado" : "Errou";
-      sub = r.tempoEsgotado ? "Acabou o tempo, então conta como erro." : "Não foi dessa vez.";
-      mov = `Você continua ${t.origem === 0 ? "na largada" : "na casa " + t.origem}.`;
+      sub = `${r.tempoEsgotado ? "Acabou o tempo." : "Não foi dessa vez."} Você continua ${t.origem === 0 ? "na largada" : "na casa " + t.origem}.`;
     }
+    // Só a certa e a marcada; as outras alternativas não ajudam a entender o resultado.
     const rev = q.alternativas.map((a, i) => {
       const certa = i === q.correta;
       const marcada = r.indice === i && !certa;
-      if (!certa && !marcada) return `<div class="rev-alt"><span>${LETRAS[i]}. ${esc(a)}</span></div>`;
-      return `<div class="rev-alt ${certa ? "certa" : "marcada"}">${icone(certa ? "certo" : "errado")}<span>${LETRAS[i]}. ${esc(a)}</span><span class="rotulo">${certa ? (r.indice === i ? "Sua resposta, certa" : "Resposta certa") : "Sua resposta"}</span></div>`;
+      if (!certa && !marcada) return "";
+      return `<div class="rev-alt ${certa ? "certa" : "marcada"}">${icone(certa ? "certo" : "errado")}<span>${esc(a)}</span><span class="rotulo">${certa ? (r.indice === i ? "Sua resposta" : "Resposta certa") : "Sua resposta"}</span></div>`;
     }).join("");
     return `<div class="tela tela-papel">
       ${barraJogo(j)}
       <section class="veredito ${r.correta ? "ok" : "erro"}" role="status">
-        <span class="selo">${icone(r.correta ? "certo" : "errado")}</span>
-        <div><h1 tabindex="-1">${titulo}</h1><p>${sub}</p></div>
+        <div class="veredito-topo">
+          <span class="selo">${icone(r.correta ? "certo" : "errado")}</span>
+          <div><h1 tabindex="-1">${titulo}</h1><p>${sub}</p></div>
+        </div>
+        ${percursoHtml(p, j, t, r.correta)}
       </section>
       <main>
-        <p class="movimento">${mov}</p>
         <div class="revisao"><p class="q">${esc(q.enunciado)}</p>${rev}</div>
         <div class="explicacao"><strong>Você sabia?</strong>${esc(q.explicacao)}</div>
-        <section class="tab-resultado" aria-label="Tabuleiro depois da jogada">
+        ${venceu ? "" : `<section class="tab-resultado" aria-label="Tabuleiro depois da jogada">
           <h2>Tabuleiro</h2>
           <div class="area-tabuleiro">${tabuleiroHtml(p, { destaque: j.id, legenda: false })}</div>
-        </section>
+        </section>`}
       </main>
       <footer class="rodape">
         <button class="btn btn-prim btn-gigante" data-acao="encerrar-turno">${venceu ? "Ver a comemoração" : "Encerrar meu turno"}</button>
@@ -524,9 +574,9 @@
           </table>
         </section>
       </main>
-      <footer class="rodape" style="background:var(--papel)">
+      <footer class="rodape rodape-fim">
         <button class="btn btn-prim" data-acao="revanche">Jogar novamente com o mesmo grupo</button>
-        <button class="btn btn-sec" style="background:var(--papel);color:var(--tinta);box-shadow:inset 0 0 0 2px var(--tinta-2)" data-acao="nova-partida">Criar uma nova partida</button>
+        <button class="btn btn-sec" data-acao="nova-partida">Criar uma nova partida</button>
       </footer>
     </div>`;
   }
@@ -558,21 +608,29 @@
     } else if (f.tipo === "menu") {
       const p = partida;
       const atual = J.jogadorDaVez(p).id;
+      const fim = J.ultimaCasa(p);
       titulo = "Placar";
-      corpo = `<ol class="placar-lista" aria-label="Ordem dos turnos">${p.ordem.map((id, i) => {
-          const j = J.jogador(p, id);
-          return `<li class="${id === atual ? "vez" : ""}">
+      corpo = `<p class="dica placar-dica">Quem está mais perto da chegada aparece primeiro.</p>
+        <ol class="placar-lista" aria-label="Quem está na frente">${J.classificacao(p).map((j) => `<li class="${j.id === atual ? "vez" : ""}">
             ${ficha(j)}
-            <div class="info"><strong>${i + 1}º ${esc(j.nome)}</strong><span>${ondeEsta(p, j.posicao)}${id === atual ? " · vez agora" : ""}</span></div>
-            <div class="ac">${j.acertos} ${j.acertos === 1 ? "acerto" : "acertos"}<small>${j.respondidas} ${j.respondidas === 1 ? "respondida" : "respondidas"}</small></div>
-          </li>`;
-        }).join("")}</ol>
+            <div class="info">
+              <strong>${esc(j.nome)}</strong>
+              <span>${ondeEsta(p, j.posicao)}${j.id === atual ? ` · <b class="tag-vez">Vez agora</b>` : ""}</span>
+              <i class="progresso-jog" aria-hidden="true"><i style="width:${Math.round((j.posicao / fim) * 100)}%"></i></i>
+            </div>
+            <div class="ac">${j.acertos}<small>${j.acertos === 1 ? "acerto" : "acertos"}</small></div>
+          </li>`).join("")}</ol>
         <div class="menu-acoes">
           <button class="btn btn-sec" data-acao="ver-tabuleiro">${icone("tabuleiro")}Ver tabuleiro</button>
+          <button class="btn btn-sec" data-acao="ver-regras">${icone("livro")}Como jogar</button>
           <button class="btn btn-sec" data-acao="som" aria-pressed="${Som.ligado}">${icone(Som.ligado ? "somLigado" : "somDesligado")}${Som.ligado ? "Desligar sons" : "Ligar sons"}</button>
           <button class="btn btn-sec" data-acao="sair">${icone("sair")}Sair para o início</button>
           <p class="dica" style="text-align:center">A partida fica salva neste celular.</p>
         </div>`;
+    } else if (f.tipo === "regras") {
+      titulo = "Como jogar";
+      corpo = `<div class="regras">${regrasHtml()}</div>
+        <div class="menu-acoes"><button class="btn btn-prim" data-acao="fechar-folha">Entendi</button></div>`;
     } else if (f.tipo === "tabuleiro") {
       titulo = "Tabuleiro";
       corpo = tabuleiroHtml(partida, { destaque: J.jogadorDaVez(partida).id });
@@ -673,14 +731,14 @@
   function desenharCronometro() {
     const t = partida.turno;
     const total = partida.config.tempo * 1000;
-    const barra = app.querySelector(".cron-barra");
+    const el = app.querySelector(".cronometro");
     const txt = app.querySelector("[data-cron]");
     const frac = Math.max(0, t.restanteMs / total);
-    if (barra) {
-      barra.style.setProperty("--p", frac.toFixed(3));
-      barra.classList.toggle("urgente", t.restanteMs <= 10000);
+    if (el) {
+      el.style.setProperty("--p", frac.toFixed(3));
+      el.classList.toggle("urgente", t.restanteMs <= 10000);
     }
-    if (txt) txt.textContent = Math.ceil(t.restanteMs / 1000) + " s";
+    if (txt) txt.textContent = Math.ceil(t.restanteMs / 1000);
   }
   document.addEventListener("visibilitychange", () => {
     if (partida) guardar();
@@ -698,33 +756,26 @@
     Som.tocar(r.correta ? "acerto" : "erro");
     if (navigator.vibrate) navigator.vibrate(r.correta ? 40 : [60, 50, 60]);
     anunciar(r.correta ? "Resposta certa!" : r.tempoEsgotado ? "Tempo esgotado." : "Resposta errada.");
-    if (r.correta) {
-      const j = J.jogadorDaVez(partida);
-      ui.anim = { id: j.id, pos: t.origem };
-    }
+    ui.anim = r.correta && !reduzMovimento ? { passos: t.destino - t.origem } : null;
     render();
-    if (ui.anim) andarPeao(t.origem, t.destino);
+    if (ui.anim) andarPeao();
   }
 
-  function andarPeao(de, para) {
-    if (reduzMovimento) {
-      ui.anim = null;
-      atualizar();
-      return;
-    }
-    let pos = de;
+  // Anda casa a casa no trecho do veredito, sem redesenhar nem rolar a tela.
+  function andarPeao() {
+    const peao = app.querySelector(".percurso .peao");
+    const total = ui.anim.passos;
+    ui.anim = null;
+    if (!peao) return;
+    let i = 0;
     const passo = () => {
-      if (!ui.anim) return;
-      pos += 1;
-      ui.anim.pos = pos;
+      if (!peao.isConnected) return;
+      i += 1;
+      peao.style.setProperty("--i", i);
       Som.tocar("passo");
-      atualizar();
-      const el = app.querySelector(".tab-resultado .casa.atual, .tab-resultado .casa-ponta.atual");
-      if (el) el.scrollIntoView({ block: "nearest", behavior: "smooth" });
-      if (pos < para) setTimeout(passo, 260);
-      else setTimeout(() => { ui.anim = null; atualizar(); }, 300);
+      if (i < total) setTimeout(passo, 280);
     };
-    setTimeout(passo, 500);
+    setTimeout(passo, 450);
   }
 
   const ACOES = {
@@ -875,6 +926,7 @@
     },
     menu() { ui.folha = { tipo: "menu" }; render(); },
     "ver-tabuleiro"() { ui.folha = { tipo: "tabuleiro" }; render(); },
+    "ver-regras"() { ui.folha = { tipo: "regras" }; render(); },
     "ver-casa"(el) {
       if (ui.tela !== "jogo" && ui.tela !== "fim") return;
       ui.folha = { tipo: "casa", casa: +el.dataset.casa };
