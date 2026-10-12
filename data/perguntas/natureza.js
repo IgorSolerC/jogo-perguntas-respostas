@@ -1444,7 +1444,7 @@ adicionarPerguntas([
     id: "an-d-042",
     categoria: "natureza",
     dificuldade: "dificil",
-    enunciado: "Como é denominado o veneno das abelhas e vespas injetado pelo ferroador modificado do ovipostor?",
+    enunciado: "Como é chamado o veneno das abelhas-melíferas, injetado pelo ferrão?",
     alternativas: ["Apitoxina", "Tetrodotoxina", "Bufotoxina", "Crotoxina"],
     correta: "Apitoxina",
     explicacao: "A apitoxina é uma mistura complexa de proteínas e peptídeos, como a melitina e a fosfolipase A2.",
