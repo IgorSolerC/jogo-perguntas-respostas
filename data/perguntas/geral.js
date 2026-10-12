@@ -1330,7 +1330,7 @@ adicionarPerguntas([
     enunciado: "Qual médico sueco criou o sistema taxonômico binomial de nomenclatura dos seres vivos?",
     alternativas: ["Lamarck", "Carl Linnaeus", "Charles Darwin", "Gregor Mendel"],
     correta: "Carl Linnaeus",
-    explicacao: "Carl Linnaeus formalizou a nomenclatura binomial em sua obra 'Systema Naturae' em 1735.",
+    explicacao: "Carl Linnaeus consolidou a nomenclatura binomial; marcos são Species Plantarum (1753), para plantas, e a 10ª edição de Systema Naturae (1758), para animais.",
   },
   {
     id: "cg-d-027",
