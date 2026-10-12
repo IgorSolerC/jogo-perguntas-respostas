@@ -929,10 +929,10 @@ adicionarPerguntas([
     id: "cg-m-044",
     categoria: "geral",
     dificuldade: "media",
-    enunciado: "Em qual país foi inventado o papel de celulose por volta do século II a.C.?",
+    enunciado: "Em qual país Cai Lun aperfeiçoou a fabricação de papel por volta de 105 d.C.?",
     alternativas: ["Egito", "Grécia", "China", "Índia"],
     correta: "China",
-    explicacao: "O papel foi desenvolvido na China antiga, atribuído ao eunuco Cai Lun.",
+    explicacao: "Cai Lun aperfeiçoou a fabricação de papel na China; vestígios de papel anteriores mostram que a técnica já existia.",
   },
   {
     id: "cg-m-045",
