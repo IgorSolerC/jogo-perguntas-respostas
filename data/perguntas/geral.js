@@ -1588,7 +1588,7 @@ adicionarPerguntas([
     id: "cg-d-055",
     categoria: "geral",
     dificuldade: "dificil",
-    enunciado: "Quem foi o primeiro explorador a liderar uma expedição que circum-navegou a Terra entre 1519 e 1522?",
+    enunciado: "Que dupla liderou, respectivamente, o início e a conclusão da primeira expedição a circum-navegar a Terra, entre 1519 e 1522?",
     alternativas: ["Cristóvão Colombo", "Fernão de Magalhães / Juan Sebastián Elcano", "Vasco da Gama", "Amerigo Vespucci"],
     correta: "Fernão de Magalhães / Juan Sebastián Elcano",
     explicacao: "Iniciada por Fernão de Magalhães e concluída por Juan Sebastián Elcano após a morte de Magalhães.",
