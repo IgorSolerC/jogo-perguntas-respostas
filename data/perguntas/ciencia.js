@@ -1390,10 +1390,10 @@ adicionarPerguntas([
     id: "ct-d-038",
     categoria: "ciencia",
     dificuldade: "dificil",
-    enunciado: "Qual física experimental sino-americana conduziu, com pesquisadores do NBS, o experimento que demonstrou a violação da paridade no decaimento beta do cobalto-60?",
+    enunciado: "Qual cientista ficou conhecida como a Primeira Dama da Física?",
     alternativas: ["Chien-Shiung Wu", "Tu Youyou", "Lise Meitner", "Vera Rubin"],
     correta: "Chien-Shiung Wu",
-    explicacao: "Chien-Shiung Wu e seus colaboradores realizaram o experimento em 1956 e publicaram os resultados em 1957.",
+    explicacao: "Chien-Shiung Wu ficou famosa por experiências que mudaram a física das partículas.",
   },
   {
     id: "ct-d-039",
