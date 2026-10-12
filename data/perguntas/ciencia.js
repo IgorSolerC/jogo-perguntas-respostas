@@ -776,10 +776,10 @@ adicionarPerguntas([
     id: "ct-m-028",
     categoria: "ciencia",
     dificuldade: "media",
-    enunciado: "Como se chama a divisão celular em que uma célula diploide origina quatro células haploides após duas divisões sucessivas?",
+    enunciado: "Qual divisão celular reduz pela metade o número de cromossomos?",
     alternativas: ["Mitose", "Meiose", "Fissão binária", "Brotamento"],
     correta: "Meiose",
-    explicacao: "A meiose reduz à metade o número de conjuntos de cromossomos; suas células resultantes podem originar gametas ou esporos.",
+    explicacao: "A meiose participa da formação de células reprodutivas, como óvulos e espermatozoides.",
   },
   {
     id: "ct-m-029",
