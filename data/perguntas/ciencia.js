@@ -1201,10 +1201,10 @@ adicionarPerguntas([
     id: "ct-d-017",
     categoria: "ciencia",
     dificuldade: "dificil",
-    enunciado: "Qual partícula, descoberta no LHC em 2012, é uma manifestação do campo associado ao mecanismo que dá massa a partículas elementares?",
+    enunciado: "Qual partícula foi descoberta no CERN em 2012, confirmando uma teoria sobre a origem da massa?",
     alternativas: ["Nêutron", "Bóson de Higgs", "Quark Top", "Pósitron"],
     correta: "Bóson de Higgs",
-    explicacao: "O bóson de Higgs é uma excitação do campo de Higgs; a interação com esse campo dá massa a partículas elementares como elétrons e quarks.",
+    explicacao: "A descoberta do bóson de Higgs ajudou a confirmar como algumas partículas ganham massa.",
   },
   {
     id: "ct-d-018",
