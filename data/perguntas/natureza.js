@@ -878,7 +878,7 @@ adicionarPerguntas([
     enunciado: "Qual é a maior espécie de peixe do mundo?",
     alternativas: ["Tubarão-branco", "Tubarão-baleia", "Orca", "Tubarão-martelo"],
     correta: "Tubarão-baleia",
-    explicacao: "O tubarão-baleia é um peixe cartilaginoso que se alimenta principalmente por filtração de plâncton e pequenos animais.",
+    explicacao: "O tubarão-baleia é o maior peixe do mundo e filtra pequenos animais da água para se alimentar.",
   },
   {
     id: "an-m-040",
