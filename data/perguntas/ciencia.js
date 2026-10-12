@@ -731,10 +731,10 @@ adicionarPerguntas([
     id: "ct-m-023",
     categoria: "ciencia",
     dificuldade: "media",
-    enunciado: "Quem propôs em 1936 uma máquina universal abstrata capaz de simular outras máquinas de computação?",
+    enunciado: "Qual cientista criou a ideia da máquina de Turing, importante para a história dos computadores?",
     alternativas: ["Alan Turing", "Charles Babbage", "John von Neumann", "Ada Lovelace"],
     correta: "Alan Turing",
-    explicacao: "Alan Turing apresentou o modelo hoje chamado máquina de Turing e a ideia de uma máquina universal.",
+    explicacao: "Alan Turing imaginou uma máquina capaz de seguir instruções para fazer cálculos.",
   },
   {
     id: "ct-m-024",
