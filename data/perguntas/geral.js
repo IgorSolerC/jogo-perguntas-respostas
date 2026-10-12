@@ -1327,10 +1327,10 @@ adicionarPerguntas([
     id: "cg-d-026",
     categoria: "geral",
     dificuldade: "dificil",
-    enunciado: "Qual médico sueco criou o sistema taxonômico binomial de nomenclatura dos seres vivos?",
+    enunciado: "Qual cientista organizou os nomes científicos em duas partes, como Homo sapiens?",
     alternativas: ["Lamarck", "Carl Linnaeus", "Charles Darwin", "Gregor Mendel"],
     correta: "Carl Linnaeus",
-    explicacao: "Carl Linnaeus consolidou a nomenclatura binomial; marcos são Species Plantarum (1753), para plantas, e a 10ª edição de Systema Naturae (1758), para animais.",
+    explicacao: "Lineu, também chamado Carl Linnaeus, ajudou a padronizar os nomes científicos das espécies.",
   },
   {
     id: "cg-d-027",
