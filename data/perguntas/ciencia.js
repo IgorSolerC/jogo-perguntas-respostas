@@ -477,10 +477,10 @@ adicionarPerguntas([
     id: "ct-f-053",
     categoria: "ciencia",
     dificuldade: "facil",
-    enunciado: "Qual o nome da empresa fundadora do buscador Google e atual holding controladora (Alphabet)?",
+    enunciado: "Qual empresa foi criada em 2015 para se tornar a holding controladora do Google?",
     alternativas: ["Meta", "Alphabet Inc.", "Microsoft", "Oracle"],
     correta: "Alphabet Inc.",
-    explicacao: "A Alphabet Inc. foi criada em 2015 como empresa-mãe do Google e suas subsidiárias.",
+    explicacao: "A Alphabet foi criada em 2015 na reorganização do Google, fundado em 1998 por Larry Page e Sergey Brin.",
   },
   {
     id: "ct-f-054",
