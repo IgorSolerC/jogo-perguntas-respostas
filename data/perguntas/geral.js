@@ -929,10 +929,10 @@ adicionarPerguntas([
     id: "cg-m-044",
     categoria: "geral",
     dificuldade: "media",
-    enunciado: "Em qual país Cai Lun aperfeiçoou a fabricação de papel por volta de 105 d.C.?",
+    enunciado: "Em qual país surgiu o papel?",
     alternativas: ["Egito", "Grécia", "China", "Índia"],
     correta: "China",
-    explicacao: "Cai Lun aperfeiçoou a fabricação de papel na China; vestígios de papel anteriores mostram que a técnica já existia.",
+    explicacao: "O papel foi desenvolvido na China há mais de dois mil anos.",
   },
   {
     id: "cg-m-045",
