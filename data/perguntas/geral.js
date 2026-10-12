@@ -689,7 +689,7 @@ adicionarPerguntas([
     enunciado: "Qual escala mede a magnitude dos terremotos com base na amplitude das ondas sísmicas?",
     alternativas: ["Escala Beaufort", "Escala Richter", "Escala Kelvin", "Escala Mohs"],
     correta: "Escala Richter",
-    explicacao: "A escala Richter quantifica a energia liberada por um sismo através de medições sismográficas.",
+    explicacao: "A escala Richter expressa a magnitude calculada com base na amplitude das ondas sísmicas registradas e na distância ao terremoto.",
   },
   {
     id: "cg-m-018",
