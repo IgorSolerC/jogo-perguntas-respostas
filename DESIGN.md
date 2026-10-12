@@ -33,9 +33,13 @@ As duas fontes estão em `assets/fonts/` (licença SIL OFL), sem depender de ser
 
 - **Toldo** (`.toldo`): listras na cor do jogador com bainha ondulada. Aparece no início, na troca de turno e na comemoração. É a assinatura do jogo; o detector do Impeccable o aponta como listra decorativa, e ele fica de propósito.
 - **Cabeça de lona + folha de papel**: telas de configuração, pergunta e resultado. Uma superfície só, sem cartões dentro de cartões.
-- **Peão** (`.ficha`): avatar sobre fundo branco com anel na cor da pessoa. Na casa, o tamanho diminui conforme o número de peões (1, 2, até 4, até 9, até 12). Tocar na casa lista quem está nela.
-- **Botões**: mínimo de 60 px de altura; o da troca de turno tem 76 px.
+- **Peão** (`.ficha`): avatar sobre fundo branco com anel na cor da pessoa. Na casa, os peões ficam na metade de baixo, sem cobrir o número: no máximo três à vista, quem joga por cima, e o resto vira "+N". Tocar na casa lista quem está nela.
+- **Corrida** (`.corrida`): na troca de turno, todos os peões numa trilha da largada à chegada, para a família ver quem está na frente.
+- **Percurso** (`.percurso`): dentro do veredito, o trecho da casa de origem até o destino. No acerto o peão anda casa a casa; no erro as casas não alcançadas ficam vazias.
+- **Placar** (`.btn-placar`): botão com texto no canto da partida. A folha ordena por quem está mais perto da chegada e traz o tabuleiro, as regras e o som.
+- **Cronômetro** (`.cronometro`): bloco ao lado de "Confirmar resposta", com um anel que esvazia; fica vermelho e pulsa nos últimos 10 segundos.
+- **Botões**: mínimo de 60 px de altura; o da troca de turno tem 76 px. Em telas com menos de 700 px de altura, a pergunta e os botões encolhem para as quatro alternativas caberem sem rolar.
 
 ## Movimento
 
-Saídas exponenciais (`--saida`). Momentos com animação: o toldo descendo na troca de turno, o dado rolando, o peão andando casa a casa depois de um acerto e o confete do fim. Com "reduzir movimento" ativado no aparelho, tudo fica instantâneo.
+Saídas exponenciais (`--saida`). Momentos com animação: o toldo descendo na troca de turno, o dado rolando, o peão andando casa a casa no percurso do veredito depois de um acerto e o confete do fim. Com "reduzir movimento" ativado no aparelho, tudo fica instantâneo.

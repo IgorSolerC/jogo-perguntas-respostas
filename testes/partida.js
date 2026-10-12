@@ -197,7 +197,7 @@ const ok = (cond, msg) => { console.log((cond ? '  ✓ ' : '  ✗ ') + msg); if 
   await foto('doze-largada');
   // empilha várias pessoas na mesma casa para ver se dá para identificar
   await page.evaluate(() => { const p = window.Quest.partida; p.jogadores.forEach((j, i) => { j.posicao = i < 7 ? 3 : i < 9 ? 5 : 0; }); });
-  await clicar('[data-acao=som]', 100); await clicar('[data-acao=som]', 300); // redesenha
+  await clicar('[data-acao=menu]', 300); await clicar('.folha [data-acao=fechar-folha]', 300); // redesenha
   await foto('doze-empilhados');
   await clicar('.casa[data-casa="3"]', 500);
   ok(await page.locator('.quem-na-casa > div').count() === 7, 'tocar na casa lista quem está nela');
