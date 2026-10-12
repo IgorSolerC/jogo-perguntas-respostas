@@ -1582,7 +1582,7 @@ adicionarPerguntas([
     enunciado: "Como se chama a transformação da lagarta em borboleta?",
     alternativas: ["Metamorfose", "Fotossíntese", "Mitose", "Hibernação"],
     correta: "Metamorfose",
-    explicacao: "Na metamorfose, a lagarta passa pela fase de pupa, chamada crisálida, da qual emerge a borboleta adulta.",
+    explicacao: "Na metamorfose, a lagarta passa pela fase de crisálida e depois vira borboleta.",
   },
   {
     id: "NAT-D-03",
