@@ -731,10 +731,10 @@ adicionarPerguntas([
     id: "ct-m-023",
     categoria: "ciencia",
     dificuldade: "media",
-    enunciado: "Quem inventou o conceito da máquina universal de passo e é considerado o pai da ciência da computação?",
+    enunciado: "Quem propôs em 1936 uma máquina universal abstrata capaz de simular outras máquinas de computação?",
     alternativas: ["Alan Turing", "Charles Babbage", "John von Neumann", "Ada Lovelace"],
     correta: "Alan Turing",
-    explicacao: "Alan Turing formalizou os conceitos de algoritmo e computação com a Máquina de Turing.",
+    explicacao: "Alan Turing apresentou o modelo hoje chamado máquina de Turing e a ideia de uma máquina universal.",
   },
   {
     id: "ct-m-024",
