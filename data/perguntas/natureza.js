@@ -995,7 +995,7 @@ adicionarPerguntas([
     enunciado: "Qual réptil gigante endêmico de ilhas da Indonésia é o maior lagarto vivo do mundo?",
     alternativas: ["Iguana-marinha", "Dragão-de-komodo", "Monitor-do-nilo", "Tegu"],
     correta: "Dragão-de-komodo",
-    explicacao: "O dragão-de-komodo pode medir 3 metros de comprimento e possui saliva rica em bactérias/toxinas.",
+    explicacao: "O dragão-de-komodo pode atingir cerca de 3 metros de comprimento e possui glândulas de veneno na mandíbula inferior.",
   },
   {
     id: "an-m-053",
