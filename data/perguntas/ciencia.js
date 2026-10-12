@@ -1294,7 +1294,7 @@ adicionarPerguntas([
     enunciado: "Qual é a estrutura geométrica teórica descrita pela Relatividade Geral que conecta dois pontos distantes no espaço-tempo?",
     alternativas: ["Buraco Negro", "Ponte de Einstein-Rosen (Buraco de Minhoca)", "Esfera de Dyson", "Singularidade gravitação"],
     correta: "Ponte de Einstein-Rosen (Buraco de Minhoca)",
-    explicacao: "Uma ponte de Einstein-Rosen é um atalho hipotético através da curvatura do espaço-tempo.",
+    explicacao: "A ponte de Einstein-Rosen é uma estrutura matemática que conecta regiões do espaço-tempo; sua forma original não permite a passagem de viajantes.",
   },
   {
     id: "ct-d-028",
