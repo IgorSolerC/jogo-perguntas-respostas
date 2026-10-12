@@ -234,10 +234,10 @@ adicionarPerguntas([
     id: "ct-f-026",
     categoria: "ciencia",
     dificuldade: "facil",
-    enunciado: "Qual gás do ar atua como comburente na queima de uma vela?",
+    enunciado: "Qual gás do ar ajuda a manter uma vela acesa?",
     alternativas: ["Nitrogênio", "Oxigênio", "Hélio", "Dióxido de Carbono"],
     correta: "Oxigênio",
-    explicacao: "Na queima de uma vela, a parafina reage com o oxigênio do ar, liberando energia.",
+    explicacao: "A chama da vela usa o oxigênio do ar para continuar queimando.",
   },
   {
     id: "ct-f-027",
