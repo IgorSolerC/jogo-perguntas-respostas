@@ -965,10 +965,10 @@ adicionarPerguntas([
     id: "ct-m-049",
     categoria: "ciencia",
     dificuldade: "media",
-    enunciado: "Qual físico britânico formulou as equações fundamentais do eletromagnetismo unificando eletricidade e magnetismo?",
+    enunciado: "Qual físico reuniu a eletricidade e o magnetismo em uma mesma teoria?",
     alternativas: ["Michael Faraday", "James Clerk Maxwell", "Heinrich Hertz", "Lord Kelvin"],
     correta: "James Clerk Maxwell",
-    explicacao: "As equações de Maxwell descrevem os campos elétricos e magnéticos e permitem deduzir a existência de ondas eletromagnéticas.",
+    explicacao: "A teoria de James Clerk Maxwell explica a luz como uma onda eletromagnética.",
   },
   {
     id: "ct-m-050",
