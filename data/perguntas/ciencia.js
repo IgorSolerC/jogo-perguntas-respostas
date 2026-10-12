@@ -1327,10 +1327,10 @@ adicionarPerguntas([
     id: "ct-d-031",
     categoria: "ciencia",
     dificuldade: "dificil",
-    enunciado: "Qual reator experimental em construção na França busca demonstrar a viabilidade comercial da fusão nuclear limpa?",
+    enunciado: "Qual projeto experimental de fusão nuclear localizado em Cadarache, na França, busca demonstrar a viabilidade científica e tecnológica da fusão por confinamento magnético?",
     alternativas: ["CERN", "ITER", "LHC", "NIF"],
     correta: "ITER",
-    explicacao: "O ITER (International Thermonuclear Experimental Reactor) utiliza contenção magnética Tokamak.",
+    explicacao: "O ITER utiliza um tokamak para estudar a fusão por confinamento magnético; o experimento não foi projetado para fornecer eletricidade à rede.",
   },
   {
     id: "ct-d-032",
