@@ -1327,10 +1327,10 @@ adicionarPerguntas([
     id: "ct-d-031",
     categoria: "ciencia",
     dificuldade: "dificil",
-    enunciado: "Qual projeto experimental de fusão nuclear localizado em Cadarache, na França, busca demonstrar a viabilidade científica e tecnológica da fusão por confinamento magnético?",
+    enunciado: "Qual projeto na França pesquisa a fusão nuclear como possível fonte de energia?",
     alternativas: ["CERN", "ITER", "LHC", "NIF"],
     correta: "ITER",
-    explicacao: "O ITER utiliza um tokamak para estudar a fusão por confinamento magnético; o experimento não foi projetado para fornecer eletricidade à rede.",
+    explicacao: "O ITER pesquisa a fusão nuclear, o mesmo tipo de reação que alimenta o Sol.",
   },
   {
     id: "ct-d-032",
