@@ -1402,7 +1402,7 @@ adicionarPerguntas([
     enunciado: "Qual astrônomo americana forneceu evidências observacionais decisivas para a existência da matéria escura estudando a rotação de galáxias?",
     alternativas: ["Jocelyn Bell", "Vera Rubin", "Henrietta Leavitt", "Cecilia Payne"],
     correta: "Vera Rubin",
-    explicacao: "Vera Rubin analisou curvas de rotação galáctica demonstrando a presença de massa invisível não-bariônica.",
+    explicacao: "Vera Rubin e colaboradores estudaram curvas de rotação de galáxias que indicavam mais massa do que a explicada pela matéria visível.",
   },
   {
     id: "ct-d-040",
