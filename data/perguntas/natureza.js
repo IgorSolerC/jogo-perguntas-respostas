@@ -1246,10 +1246,10 @@ adicionarPerguntas([
     id: "an-d-020",
     categoria: "natureza",
     dificuldade: "dificil",
-    enunciado: "Qual cetáceo do Ártico possui um canino superior longo e helicoidal nos machos?",
+    enunciado: "Qual animal marinho tem uma longa presa que lembra um chifre?",
     alternativas: ["Beluga", "Narval", "Orca", "Baleia-jubarte"],
     correta: "Narval",
-    explicacao: "A presa helicoidal do narval é um dente alongado, geralmente o canino superior esquerdo do macho, que pode atingir cerca de 3 metros.",
+    explicacao: "A presa do narval é um dente alongado que pode chegar a cerca de 3 metros.",
   },
   {
     id: "an-d-021",
