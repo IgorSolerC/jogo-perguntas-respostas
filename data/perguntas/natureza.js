@@ -396,7 +396,7 @@ adicionarPerguntas([
     id: "an-f-044",
     categoria: "natureza",
     dificuldade: "facil",
-    enunciado: "Qual grupo vegetal não possui flores nem sementes, reproduzindo-se por esporos (ex: samambaia)?",
+    enunciado: "Qual grupo vegetal inclui plantas com vasos condutores, sem flores nem sementes, que se reproduzem por esporos, como as samambaias?",
     alternativas: ["Gimnospermas", "Angiospermas", "Pteridófitas", "Briófitas sem vasos"],
     correta: "Pteridófitas",
     explicacao: "As pteridófitas são plantas vasculares sem sementes que produzem esporos.",
