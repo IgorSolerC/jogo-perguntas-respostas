@@ -722,10 +722,10 @@ adicionarPerguntas([
     id: "an-m-022",
     categoria: "natureza",
     dificuldade: "media",
-    enunciado: "Qual grande felino das Américas é conhecido por nadar bem e caçar jacarés e capivaras?",
+    enunciado: "Qual grande felino das Américas nada bem e pode caçar jacarés?",
     alternativas: ["Leopardo", "Onça-pintada", "Gato-do-mato", "Jaguatirica"],
     correta: "Onça-pintada",
-    explicacao: "A onça-pintada é uma nadadora hábil que caça peixes, jacarés e capivaras nos rios.",
+    explicacao: "A onça-pintada é uma ótima nadadora e também caça dentro da água.",
   },
   {
     id: "an-m-023",
