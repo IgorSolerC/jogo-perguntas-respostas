@@ -1294,7 +1294,7 @@ adicionarPerguntas([
     enunciado: "Qual ordem de insetos inclui os besouros?",
     alternativas: ["Lepidoptera", "Coleoptera", "Hymenoptera", "Diptera"],
     correta: "Coleoptera",
-    explicacao: "Coleoptera é a ordem dos besouros, um dos grupos animais com maior número de espécies descritas.",
+    explicacao: "Coleoptera é a ordem dos besouros.",
   },
   {
     id: "an-d-026",
