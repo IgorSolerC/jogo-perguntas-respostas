@@ -1010,10 +1010,10 @@ adicionarPerguntas([
     id: "an-m-054",
     categoria: "natureza",
     dificuldade: "media",
-    enunciado: "Qual mamífero edentado possui garras enormes e se alimenta quase exclusivamente de cupins e formigas?",
+    enunciado: "Qual mamífero nativo das Américas não possui dentes, tem focinho longo e garras enormes e se alimenta principalmente de cupins e formigas?",
     alternativas: ["Tamanduá-bandeira", "Tatu-bola", "Preguiça", "Pangolim"],
     correta: "Tamanduá-bandeira",
-    explicacao: "O tamanduá-bandeira possui língua viscosa comprida sem dentes para capturar insetos.",
+    explicacao: "O tamanduá-bandeira captura formigas e cupins com sua língua longa e pegajosa; sua boca não possui dentes.",
   },
   {
     id: "an-m-055",
