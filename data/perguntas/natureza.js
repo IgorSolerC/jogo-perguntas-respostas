@@ -1453,10 +1453,10 @@ adicionarPerguntas([
     id: "an-d-043",
     categoria: "natureza",
     dificuldade: "dificil",
-    enunciado: "Qual destes mamíferos marsupiais tem gestação de cerca de 12 a 13 dias?",
+    enunciado: "Qual destes animais pode ter filhotes após apenas 12 a 13 dias de gestação?",
     alternativas: ["Musaranho-etrusco", "Gambá-da-virgínia", "Camundongo-doméstico", "Morcego-focinho-de-porco"],
     correta: "Gambá-da-virgínia",
-    explicacao: "O gambá-da-virgínia dá à luz filhotes muito imaturos, que continuam seu desenvolvimento no marsúpio.",
+    explicacao: "Os filhotes do gambá-da-virgínia nascem muito pequenos e continuam crescendo na bolsa da mãe.",
   },
   {
     id: "an-d-044",
