@@ -758,10 +758,10 @@ adicionarPerguntas([
     id: "cg-m-025",
     categoria: "geral",
     dificuldade: "media",
-    enunciado: "Qual elemento químico tem o símbolo 'Fe'?",
+    enunciado: "Qual livro sagrado do cristianismo reúne o Antigo e o Novo Testamento?",
     alternativas: ["Flúor", "Ferro", "Francio", "Fórmio"],
     correta: "Ferro",
-    explicacao: "O símbolo 'Fe' origina-se do termo em latim 'ferrum', representando o elemento ferro.",
+    explicacao: "A Bíblia cristã reúne os livros do Antigo Testamento e do Novo Testamento.",
   },
   {
     id: "cg-m-026",
