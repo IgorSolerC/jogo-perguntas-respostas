@@ -1390,10 +1390,10 @@ adicionarPerguntas([
     id: "ct-d-038",
     categoria: "ciencia",
     dificuldade: "dificil",
-    enunciado: "Qual física teórica chinesa-americana demonstrou experimentalmente a violação da conservação da paridade em reações nucleares em 1956?",
+    enunciado: "Qual física experimental sino-americana conduziu, com pesquisadores do NBS, o experimento que demonstrou a violação da paridade no decaimento beta do cobalto-60?",
     alternativas: ["Chien-Shiung Wu", "Tu Youyou", "Lise Meitner", "Vera Rubin"],
     correta: "Chien-Shiung Wu",
-    explicacao: "Chien-Shiung Wu conduziu o experimento de decaimento do Cobalto-60 comprovando a violação da paridade nas interações fracas.",
+    explicacao: "Chien-Shiung Wu e seus colaboradores realizaram o experimento em 1956 e publicaram os resultados em 1957.",
   },
   {
     id: "ct-d-039",
