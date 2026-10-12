@@ -342,10 +342,10 @@ adicionarPerguntas([
     id: "cg-f-038",
     categoria: "geral",
     dificuldade: "facil",
-    enunciado: "Qual gás do ar é utilizado pelas células humanas na respiração aeróbia?",
+    enunciado: "Qual gás do ar é essencial para a nossa respiração?",
     alternativas: ["Nitrogênio", "Oxigênio", "Hélio", "Metano"],
     correta: "Oxigênio",
-    explicacao: "O oxigênio é indispensável para a respiração celular humana.",
+    explicacao: "Nosso corpo usa oxigênio para obter energia dos alimentos.",
   },
   {
     id: "cg-f-039",
