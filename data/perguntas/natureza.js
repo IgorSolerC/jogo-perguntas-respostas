@@ -1435,7 +1435,7 @@ adicionarPerguntas([
     id: "an-d-041",
     categoria: "natureza",
     dificuldade: "dificil",
-    enunciado: "Qual árvore nativa da bacia do Rio Congo/Amazônia possui os maiores frutos lenhosos em cápsula contendo castanhas?",
+    enunciado: "Qual árvore nativa da Amazônia produz castanhas dentro de frutos lenhosos conhecidos como ouriços?",
     alternativas: ["Castanheira-do-pará (Bertholletia excelsa)", "Seringueira", "Açaí", "Cacaueiro"],
     correta: "Castanheira-do-pará (Bertholletia excelsa)",
     explicacao: "A castanheira-do-pará produz ouriços lenhosos extremamente duros caindo do topo do dossel da floresta.",
