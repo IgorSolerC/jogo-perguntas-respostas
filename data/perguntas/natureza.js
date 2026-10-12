@@ -1429,7 +1429,7 @@ adicionarPerguntas([
     enunciado: "Qual mamífero carnívoro aquático habita o rio Amazonas e pode medir até 1,8 metro de comprimento?",
     alternativas: ["Ariranha", "Lutra-neotropical", "Peixe-boi", "Boto-cor-de-rosa"],
     correta: "Ariranha",
-    explicacao: "A ariranha é a maior espécie da família Mustelidae, vivendo em grupos familiares sociais nas bacias sul-americanas.",
+    explicacao: "A ariranha é uma das maiores espécies de lontra e vive em grupos familiares em rios de bacias sul-americanas.",
   },
   {
     id: "an-d-041",
