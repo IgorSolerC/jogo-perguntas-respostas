@@ -1543,10 +1543,10 @@ adicionarPerguntas([
     id: "an-d-053",
     categoria: "natureza",
     dificuldade: "dificil",
-    enunciado: "Qual anfíbio cego e sem patas vive enterrado no solo úmido e lembra uma minhoca grande?",
+    enunciado: "Qual grupo de anfíbios não possui patas, tem olhos reduzidos e inclui espécies que vivem enterradas no solo úmido?",
     alternativas: ["Cecília / Cobra-cega (Gymnophiona)", "Salamandra-de-fogo", "Sapo-cururu", "Tritão"],
     correta: "Cecília / Cobra-cega (Gymnophiona)",
-    explicacao: "As cecílias formam a ordem Gymnophiona de anfíbios ápodes fossoriais.",
+    explicacao: "As cecílias pertencem à ordem Gymnophiona; muitas são fossoriais, mas também existem espécies aquáticas.",
   },
   {
     id: "an-d-054",
