@@ -234,10 +234,10 @@ adicionarPerguntas([
     id: "an-f-026",
     categoria: "natureza",
     dificuldade: "facil",
-    enunciado: "Qual destas estruturas protege os ovos das aves e répteis contra dessecação?",
+    enunciado: "Que estrutura externa ajuda a proteger os ovos das aves contra a perda de água?",
     alternativas: ["Casca dura/calcária", "Membrana mucosa", "Geleia transparente", "Pele felpuda"],
     correta: "Casca dura/calcária",
-    explicacao: "A casca calcária ou courenta permite as trocas gasosas mantendo a umidade do embrião.",
+    explicacao: "A casca calcária dos ovos das aves oferece proteção e possui poros que permitem trocas gasosas.",
   },
   {
     id: "an-f-027",
