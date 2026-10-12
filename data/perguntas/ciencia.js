@@ -1240,7 +1240,7 @@ adicionarPerguntas([
     enunciado: "Qual supercomputador da IBM derrotou o campeão mundial de xadrez Garry Kasparov em 1997?",
     alternativas: ["Watson", "Deep Blue", "AlphaGo", "DeepMind"],
     correta: "Deep Blue",
-    explicacao: "O Deep Blue tornou-se o primeiro computador a vencer um campeão mundial de xadrez em confronto oficial.",
+    explicacao: "Em 1997, o Deep Blue venceu Kasparov em uma disputa de seis partidas, tornando-se o primeiro computador a derrotar o campeão mundial vigente em um match sob condições clássicas.",
   },
   {
     id: "ct-d-022",
