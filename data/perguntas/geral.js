@@ -1309,10 +1309,10 @@ adicionarPerguntas([
     id: "cg-d-024",
     categoria: "geral",
     dificuldade: "dificil",
-    enunciado: "Qual é a velocidade limite de rotação de um objeto massivo antes que ele se desintegre, segundo a astrofísica?",
+    enunciado: "Como se chama o limite de rotação de uma estrela no qual o efeito centrífugo no equador pode equilibrar a atração gravitacional?",
     alternativas: ["Limite de Chandrasekhar", "Limite de Roche", "Limite de breakup", "Raio de Schwarzschild"],
     correta: "Limite de breakup",
-    explicacao: "O limite de breakup é a taxa de rotação em que a força centrífuga iguala a gravidade na superfície.",
+    explicacao: "O limite de breakup, ou ruptura rotacional, é uma taxa crítica acima da qual a estrela pode perder matéria pelo equador.",
   },
   {
     id: "cg-d-025",
