@@ -324,10 +324,10 @@ adicionarPerguntas([
     id: "an-f-036",
     categoria: "natureza",
     dificuldade: "facil",
-    enunciado: "Qual alimento constitui a quase totalidade da dieta do panda-gigante?",
+    enunciado: "Qual é o principal alimento do panda-gigante?",
     alternativas: ["Carne de peixe", "Folhas de eucalipto", "Bambu", "Algas marinhas"],
     correta: "Bambu",
-    explicacao: "O panda-gigante dedica cerca de 12 horas por dia mastigando caules e folhas de bambu.",
+    explicacao: "O panda-gigante come principalmente folhas e caules de bambu.",
   },
   {
     id: "an-f-037",
