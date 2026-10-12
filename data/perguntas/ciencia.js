@@ -1372,10 +1372,10 @@ adicionarPerguntas([
     id: "ct-d-036",
     categoria: "ciencia",
     dificuldade: "dificil",
-    enunciado: "Qual isótopo de urânio é físsil e usado como combustível em muitos reatores nucleares?",
+    enunciado: "Qual tipo de urânio é usado como combustível em muitos reatores nucleares?",
     alternativas: ["Tório", "Urânio-235", "Plutônio", "Rádio"],
     correta: "Urânio-235",
-    explicacao: "O urânio-235 é um isótopo do elemento urânio e pode sofrer fissão ao absorver um nêutron térmico.",
+    explicacao: "O urânio-235 libera energia quando seus núcleos são divididos.",
   },
   {
     id: "ct-d-037",
