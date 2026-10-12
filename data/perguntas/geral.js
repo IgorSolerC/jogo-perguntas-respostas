@@ -794,10 +794,10 @@ adicionarPerguntas([
     id: "cg-m-029",
     categoria: "geral",
     dificuldade: "media",
-    enunciado: "Qual moeda brasileira entrou em circulação em 1º de julho de 1994?",
+    enunciado: "Qual moeda brasileira começou a ser usada em 1994?",
     alternativas: ["Cruzado", "Cruzeiro Real", "Real", "Cruzeiro"],
     correta: "Real",
-    explicacao: "O Real (R$) foi introduzido em 1º de julho de 1994 no Plano Real.",
+    explicacao: "O real entrou em circulação em 1º de julho de 1994.",
   },
   {
     id: "cg-m-030",
