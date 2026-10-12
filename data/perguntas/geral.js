@@ -1318,10 +1318,10 @@ adicionarPerguntas([
     id: "cg-d-025",
     categoria: "geral",
     dificuldade: "dificil",
-    enunciado: "Qual é a única letra do alfabeto latino moderno que não aparece na Tabela Periódica dos elementos?",
-    alternativas: ["J", "Q", "X", "Z"],
+    enunciado: "Qual destas letras não aparece nos símbolos oficiais dos 118 elementos químicos?",
+    alternativas: ["J", "W", "X", "Z"],
     correta: "J",
-    explicacao: "A letra J não figura em nenhum símbolo de elemento químico na Tabela Periódica oficial da IUPAC.",
+    explicacao: "J não aparece nos símbolos oficiais; W é o tungstênio, X aparece em Xe e Z aparece em Zn e Zr. Q também não é usado nesses símbolos.",
   },
   {
     id: "cg-d-026",
