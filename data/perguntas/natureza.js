@@ -291,7 +291,7 @@ adicionarPerguntas([
     enunciado: "Qual destas aves é considerada símbolo do Pantanal brasileiro?",
     alternativas: ["Tuiuiú", "Pinguim", "Flamingo", "Avestruz"],
     correta: "Tuiuiú",
-    explicacao: "O tuiuiú é a ave símbolo do Pantanal com sua marcante plumagem e papo vermelho.",
+    explicacao: "O tuiuiú é uma ave símbolo do Pantanal, conhecida pelo pescoço vermelho.",
   },
   {
     id: "an-f-033",
