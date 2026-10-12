@@ -477,10 +477,10 @@ adicionarPerguntas([
     id: "ct-f-053",
     categoria: "ciencia",
     dificuldade: "facil",
-    enunciado: "Qual empresa foi criada em 2015 para se tornar a holding controladora do Google?",
+    enunciado: "Qual empresa foi criada em 2015 para reunir o Google e outros negócios?",
     alternativas: ["Meta", "Alphabet Inc.", "Microsoft", "Oracle"],
     correta: "Alphabet Inc.",
-    explicacao: "A Alphabet foi criada em 2015 na reorganização do Google, fundado em 1998 por Larry Page e Sergey Brin.",
+    explicacao: "A Alphabet é a empresa que reúne o Google e outros negócios do grupo.",
   },
   {
     id: "ct-f-054",
