@@ -1381,7 +1381,7 @@ adicionarPerguntas([
     id: "ct-d-037",
     categoria: "ciencia",
     dificuldade: "dificil",
-    enunciado: "Qual foi a primeira sonda espacial lançada com sucesso pela União Soviética em 1957 inaugurando a Era Espacial?",
+    enunciado: "Qual foi o primeiro satélite artificial a entrar em órbita da Terra, lançado pela União Soviética em 1957?",
     alternativas: ["Vostok 1", "Sputnik 1", "Explorer 1", "Luna 2"],
     correta: "Sputnik 1",
     explicacao: "O Sputnik 1 foi o primeiro satélite artificial a orbitar a Terra, lançado em 4 de outubro de 1957.",
