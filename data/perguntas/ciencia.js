@@ -902,10 +902,10 @@ adicionarPerguntas([
     id: "ct-m-042",
     categoria: "ciencia",
     dificuldade: "media",
-    enunciado: "Qual inventor desenvolveu motores de indução e sistemas polifásicos de corrente alternada associados à Guerra das Correntes?",
+    enunciado: "Qual inventor ficou famoso por desenvolver motores de corrente alternada?",
     alternativas: ["Nikola Tesla", "Michael Faraday", "James Maxwell", "Alessandro Volta"],
     correta: "Nikola Tesla",
-    explicacao: "Nikola Tesla desenvolveu motores e sistemas de corrente alternada; a corrente alternada já era conhecida antes de suas invenções.",
+    explicacao: "Os motores de Nikola Tesla ajudaram a espalhar o uso da corrente alternada.",
   },
   {
     id: "ct-m-043",
