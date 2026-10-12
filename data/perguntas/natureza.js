@@ -1001,10 +1001,10 @@ adicionarPerguntas([
     id: "an-m-053",
     categoria: "natureza",
     dificuldade: "media",
-    enunciado: "Qual é a principal fonte de oxigênio responsável pela maior parte da produção global de ar respirável?",
+    enunciado: "Qual grupo de organismos marinhos responde por grande parte da produção de oxigênio nos oceanos?",
     alternativas: ["Floresta Amazônica", "Fitoplâncton marinho nos oceanos", "Taiga Siberiana", "Florestas da Europa"],
     correta: "Fitoplâncton marinho nos oceanos",
-    explicacao: "Microalgas e cianobactérias marinhas produzem mais de 50% do oxigênio do planeta.",
+    explicacao: "Microalgas e cianobactérias do fitoplâncton realizam fotossíntese; os oceanos respondem por cerca de metade da produção de oxigênio da Terra.",
   },
   {
     id: "an-m-054",
