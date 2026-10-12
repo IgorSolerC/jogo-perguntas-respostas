@@ -839,10 +839,10 @@ adicionarPerguntas([
     id: "ct-m-035",
     categoria: "ciencia",
     dificuldade: "media",
-    enunciado: "Qual química e cristalógrafa britânica tirou a famosa 'Fotografia 51' de difração de raio-X revelando o DNA?",
+    enunciado: "Qual cristalógrafa britânica obteve, com seu aluno Raymond Gosling, a Fotografia 51 de difração de raios X do DNA?",
     alternativas: ["Marie Curie", "Rosalind Franklin", "Ada Lovelace", "Lise Meitner"],
     correta: "Rosalind Franklin",
-    explicacao: "Rosalind Franklin obteve a imagem essencial de difração de raios-X que confirmou a dupla hélice.",
+    explicacao: "Rosalind Franklin e Raymond Gosling obtiveram a imagem em 1952; ela foi importante para determinar a estrutura helicoidal do DNA.",
   },
   {
     id: "ct-m-036",
