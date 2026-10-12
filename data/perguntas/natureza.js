@@ -965,10 +965,10 @@ adicionarPerguntas([
     id: "an-m-049",
     categoria: "natureza",
     dificuldade: "media",
-    enunciado: "Qual é a maior espécie de felino do mundo, nativa da Ásia?",
+    enunciado: "Qual é a maior espécie de felino do mundo?",
     alternativas: ["Tigre", "Leão", "Leopardo-das-neves", "Chita"],
     correta: "Tigre",
-    explicacao: "O tigre (Panthera tigris) é o maior felino do mundo e vive em florestas asiáticas.",
+    explicacao: "O tigre é o maior felino do mundo e vive naturalmente na Ásia.",
   },
   {
     id: "an-m-050",
