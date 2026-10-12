@@ -486,10 +486,10 @@ adicionarPerguntas([
     id: "cg-f-054",
     categoria: "geral",
     dificuldade: "facil",
-    enunciado: "Qual é a cor tradicional das caixas públicas de coleta de correspondências dos Correios no Brasil?",
+    enunciado: "Qual é a cor tradicional das caixas de coleta dos Correios no Brasil?",
     alternativas: ["Azul", "Amarela", "Verde", "Vermelha"],
     correta: "Amarela",
-    explicacao: "As caixas de coleta tradicionais dos Correios no Brasil são amarelas.",
+    explicacao: "As caixas de coleta dos Correios são tradicionalmente amarelas.",
   },
   {
     id: "cg-f-055",
