@@ -336,7 +336,7 @@ adicionarPerguntas([
     enunciado: "Qual partícula subatômica possui carga elétrica negativa?",
     alternativas: ["Próton", "Elétron", "Nêutron", "Pósitron"],
     correta: "Elétron",
-    explicacao: "O elétron possui carga elétrica negativa; no átomo, seus estados são descritos por orbitais, não por órbitas clássicas.",
+    explicacao: "O elétron tem carga negativa; o próton tem carga positiva.",
   },
   {
     id: "ct-f-038",
