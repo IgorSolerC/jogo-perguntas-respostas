@@ -369,9 +369,9 @@ adicionarPerguntas([
     id: "an-f-041",
     categoria: "natureza",
     dificuldade: "facil",
-    enunciado: "Qual mamífero aquático atinge grandes tamanhos e é conhecido como 'peixe-boi'?",
-    alternativas: ["Sireno / Peixe-boi", "Golfinho", "Tubarão", "Foca-monja"],
-    correta: "Sireno / Peixe-boi",
+    enunciado: "Qual destes mamíferos aquáticos herbívoros pertence à ordem Sirenia?",
+    alternativas: ["Peixe-boi", "Golfinho", "Tubarão", "Foca-monja"],
+    correta: "Peixe-boi",
     explicacao: "O peixe-boi é um mamífero aquático herbívoro nativo de águas tropicais.",
   },
   {
