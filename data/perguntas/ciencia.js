@@ -1462,10 +1462,10 @@ adicionarPerguntas([
     id: "ct-d-046",
     categoria: "ciencia",
     dificuldade: "dificil",
-    enunciado: "Qual é a liga supercondutora de alta temperatura crítica descoberta em 1986 por Bednorz e Müller?",
+    enunciado: "Qual material cerâmico teve sua supercondutividade acima de 77 K demonstrada em 1987 por Paul Chu e colaboradores?",
     alternativas: ["Nióbio-Titânio", "YBCO (Óxido de Ítrio-Bário-Cobre)", "Grafe de Chumbo", "Diboreto de Magnésio"],
     correta: "YBCO (Óxido de Ítrio-Bário-Cobre)",
-    explicacao: "Os cupratos como o YBCO atingem supercondutividade acima do ponto de ebulição do nitrogênio líquido (77 K).",
+    explicacao: "O YBCO, um óxido de ítrio, bário e cobre, tornou-se supercondutor perto de 93 K, acima da temperatura de ebulição do nitrogênio líquido.",
   },
   {
     id: "ct-d-047",
