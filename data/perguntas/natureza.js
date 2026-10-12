@@ -1249,7 +1249,7 @@ adicionarPerguntas([
     enunciado: "Qual cetáceo do Ártico possui um canino superior longo e helicoidal nos machos?",
     alternativas: ["Beluga", "Narval", "Orca", "Baleia-jubarte"],
     correta: "Narval",
-    explicacao: "O narval possui uma túnica/presa helicoidal que se projeta pelo lábio superior até 3 metros.",
+    explicacao: "A presa helicoidal do narval é um dente alongado, geralmente o canino superior esquerdo do macho, que pode atingir cerca de 3 metros.",
   },
   {
     id: "an-d-021",
