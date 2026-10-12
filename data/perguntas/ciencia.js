@@ -1399,10 +1399,10 @@ adicionarPerguntas([
     id: "ct-d-039",
     categoria: "ciencia",
     dificuldade: "dificil",
-    enunciado: "Qual astrônomo americana forneceu evidências observacionais decisivas para a existência da matéria escura estudando a rotação de galáxias?",
+    enunciado: "Qual astrônoma ficou famosa por reunir evidências da existência de matéria escura nas galáxias?",
     alternativas: ["Jocelyn Bell", "Vera Rubin", "Henrietta Leavitt", "Cecilia Payne"],
     correta: "Vera Rubin",
-    explicacao: "Vera Rubin e colaboradores estudaram curvas de rotação de galáxias que indicavam mais massa do que a explicada pela matéria visível.",
+    explicacao: "Vera Rubin estudou estrelas que se moviam como se houvesse mais matéria do que conseguimos ver.",
   },
   {
     id: "ct-d-040",
