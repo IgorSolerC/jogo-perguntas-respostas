@@ -1357,7 +1357,7 @@ adicionarPerguntas([
     enunciado: "Qual é o horizonte hipotético ao redor de um buraco negro além do qual nada, nem mesmo a luz, pode escapar?",
     alternativas: ["Singularidade", "Horizonte de Eventos", "Esfera de Fótons", "Ergostfera"],
     correta: "Horizonte de Eventos",
-    explicacao: "O Horizonte de Eventos marca a fronteira de onde a velocidade de escape supera a velocidade da luz.",
+    explicacao: "O horizonte de eventos delimita a região de um buraco negro da qual sinais luminosos não conseguem alcançar observadores distantes.",
   },
   {
     id: "ct-d-035",
