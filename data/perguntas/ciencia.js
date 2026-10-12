@@ -1022,7 +1022,7 @@ adicionarPerguntas([
     enunciado: "Qual ramo da tecnologia foca no desenvolvimento de materiais e dispositivos na escala de milionésimos de milímetro?",
     alternativas: ["Biotecnologia", "Nanotecnologia", "Mecatrônica", "Robótica"],
     correta: "Nanotecnologia",
-    explicacao: "Nanotecnologia manipula a matéria na escala manométrica (1 a 100 nanômetros).",
+    explicacao: "A nanotecnologia trabalha com estruturas em escala nanométrica, geralmente entre 1 e 100 nanômetros.",
   },
   {
     id: "CIE-M-04",
