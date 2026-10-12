@@ -722,7 +722,7 @@ adicionarPerguntas([
     id: "an-m-022",
     categoria: "natureza",
     dificuldade: "media",
-    enunciado: "Qual é o único felino das Américas que costuma ter afinidade e nadar em rios?",
+    enunciado: "Qual grande felino das Américas é conhecido por nadar bem e caçar jacarés e capivaras?",
     alternativas: ["Leopardo", "Onça-pintada", "Gato-do-mato", "Jaguatirica"],
     correta: "Onça-pintada",
     explicacao: "A onça-pintada é uma nadadora hábil que caça peixes, jacarés e capivaras nos rios.",
