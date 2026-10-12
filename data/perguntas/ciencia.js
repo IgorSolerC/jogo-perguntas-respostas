@@ -1019,10 +1019,10 @@ adicionarPerguntas([
     id: "ct-m-055",
     categoria: "ciencia",
     dificuldade: "media",
-    enunciado: "Qual ramo da tecnologia foca no desenvolvimento de materiais e dispositivos na escala de milionésimos de milímetro?",
+    enunciado: "Qual área da tecnologia cria materiais e dispositivos na escala de átomos e moléculas?",
     alternativas: ["Biotecnologia", "Nanotecnologia", "Mecatrônica", "Robótica"],
     correta: "Nanotecnologia",
-    explicacao: "A nanotecnologia trabalha com estruturas em escala nanométrica, geralmente entre 1 e 100 nanômetros.",
+    explicacao: "A nanotecnologia trabalha com estruturas muito menores que a espessura de um fio de cabelo.",
   },
   {
     id: "CIE-M-04",
