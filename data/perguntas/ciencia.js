@@ -171,10 +171,10 @@ adicionarPerguntas([
     id: "ct-f-019",
     categoria: "ciencia",
     dificuldade: "facil",
-    enunciado: "Qual invenção foi comercialmente patenteada por Thomas Edison em 1879?",
+    enunciado: "Qual invenção de Thomas Edison recebeu a patente norte-americana nº 223.898 em janeiro de 1880?",
     alternativas: ["Telefone", "Lâmpada incandescente prática", "Rádio", "Televisão"],
     correta: "Lâmpada incandescente prática",
-    explicacao: "Thomas Edison aprimorou o filamento de carbono criando a lâmpada elétrica incandescente comercial.",
+    explicacao: "Edison solicitou essa patente de lâmpada incandescente em novembro de 1879; ela foi concedida em 27 de janeiro de 1880.",
   },
   {
     id: "ct-f-020",
