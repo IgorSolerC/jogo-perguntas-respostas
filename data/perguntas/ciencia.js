@@ -1264,10 +1264,10 @@ adicionarPerguntas([
     id: "ct-d-024",
     categoria: "ciencia",
     dificuldade: "dificil",
-    enunciado: "Qual teorema da incompletude provou em 1931 que nenhum sistema axiomático consistente da matemática é capaz de provar todas as verdades sobre números inteiros?",
+    enunciado: "Qual teorema de 1931 mostra que um sistema formal consistente, efetivamente axiomatizado e capaz de expressar aritmética básica contém proposições que não pode provar nem refutar?",
     alternativas: ["Teorema de Fermat", "Teorema de Gödel", "Teorema de Bayes", "Teorema de Cantor"],
     correta: "Teorema de Gödel",
-    explicacao: "Kurt Gödel demonstrou os limites fundamentais da lógica formal e dos sistemas axiomáticos.",
+    explicacao: "O primeiro teorema da incompletude de Gödel aplica-se a sistemas consistentes, efetivamente axiomatizados e suficientemente expressivos para a aritmética.",
   },
   {
     id: "ct-d-025",
