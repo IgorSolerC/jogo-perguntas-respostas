@@ -731,10 +731,10 @@ adicionarPerguntas([
     id: "ct-m-023",
     categoria: "ciencia",
     dificuldade: "media",
-    enunciado: "Qual cientista criou a ideia da máquina de Turing, importante para a história dos computadores?",
+    enunciado: "Qual cientista ajudou a decifrar mensagens da máquina Enigma durante a Segunda Guerra Mundial?",
     alternativas: ["Alan Turing", "Charles Babbage", "John von Neumann", "Ada Lovelace"],
     correta: "Alan Turing",
-    explicacao: "Alan Turing imaginou uma máquina capaz de seguir instruções para fazer cálculos.",
+    explicacao: "Alan Turing foi um pioneiro da computação e participou da equipe que decifrou mensagens da Enigma.",
   },
   {
     id: "ct-m-024",
