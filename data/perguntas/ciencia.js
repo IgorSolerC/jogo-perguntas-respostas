@@ -1381,10 +1381,10 @@ adicionarPerguntas([
     id: "ct-d-037",
     categoria: "ciencia",
     dificuldade: "dificil",
-    enunciado: "Qual foi o primeiro satélite artificial a entrar em órbita da Terra, lançado pela União Soviética em 1957?",
+    enunciado: "Qual foi o primeiro satélite artificial a orbitar a Terra?",
     alternativas: ["Vostok 1", "Sputnik 1", "Explorer 1", "Luna 2"],
     correta: "Sputnik 1",
-    explicacao: "O Sputnik 1 foi o primeiro satélite artificial a orbitar a Terra, lançado em 4 de outubro de 1957.",
+    explicacao: "O Sputnik 1 foi lançado pela União Soviética em 1957.",
   },
   {
     id: "ct-d-038",
