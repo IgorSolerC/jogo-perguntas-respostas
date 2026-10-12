@@ -1480,10 +1480,10 @@ adicionarPerguntas([
     id: "an-d-046",
     categoria: "natureza",
     dificuldade: "dificil",
-    enunciado: "Qual réptil é considerado o vertebrado com o veneno hemotóxico mais potente da fauna sul-americana?",
+    enunciado: "Qual serpente é endêmica da Ilha da Queimada Grande, no litoral de São Paulo?",
     alternativas: ["Jararaca-ilhoa (Bothrops insularis)", "Cascavel", "Coral-verdadeira", "Surucucu-pico-de-jaca"],
     correta: "Jararaca-ilhoa (Bothrops insularis)",
-    explicacao: "A jararaca-ilhoa da Ilha da Queimada Grande desenvolveu um veneno potente para abater aves migratórias rapidamente.",
+    explicacao: "A jararaca-ilhoa (Bothrops insularis) vive naturalmente na Ilha da Queimada Grande e se alimenta principalmente de aves na fase adulta.",
   },
   {
     id: "an-d-047",
