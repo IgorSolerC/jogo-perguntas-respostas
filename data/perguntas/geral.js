@@ -216,10 +216,10 @@ adicionarPerguntas([
     id: "cg-f-024",
     categoria: "geral",
     dificuldade: "facil",
-    enunciado: "Qual cor resulta da mistura de azul e amarelo?",
+    enunciado: "Na mistura tradicional de tintas, que cor resulta da combinação de azul e amarelo?",
     alternativas: ["Roxo", "Verde", "Laranja", "Castanho"],
     correta: "Verde",
-    explicacao: "Azul e amarelo são cores primárias que, quando combinadas, formam a cor verde.",
+    explicacao: "No modelo tradicional de mistura de tintas, azul e amarelo formam verde.",
   },
   {
     id: "cg-f-025",
