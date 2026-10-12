@@ -686,10 +686,10 @@ adicionarPerguntas([
     id: "cg-m-017",
     categoria: "geral",
     dificuldade: "media",
-    enunciado: "Qual escala mede a magnitude dos terremotos com base na amplitude das ondas sísmicas?",
+    enunciado: "Qual escala é usada para medir a magnitude de terremotos?",
     alternativas: ["Escala Beaufort", "Escala Richter", "Escala Kelvin", "Escala Mohs"],
     correta: "Escala Richter",
-    explicacao: "A escala Richter expressa a magnitude calculada com base na amplitude das ondas sísmicas registradas e na distância ao terremoto.",
+    explicacao: "A escala Richter indica o tamanho de um terremoto.",
   },
   {
     id: "cg-m-018",
