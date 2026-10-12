@@ -767,10 +767,10 @@ adicionarPerguntas([
     id: "cg-m-026",
     categoria: "geral",
     dificuldade: "media",
-    enunciado: "Qual é o livro mais vendido e traduzido de todos os tempos no mundo?",
+    enunciado: "Qual livro sagrado do cristianismo reúne o Antigo e o Novo Testamento?",
     alternativas: ["O Alquimista", "A Bíblia", "Dom Quixote", "O Senhor dos Anéis"],
     correta: "A Bíblia",
-    explicacao: "A Bíblia Sagrada é reconhecida mundialmente como o livro mais vendido de todos os tempos.",
+    explicacao: "A Bíblia cristã reúne o Antigo Testamento e o Novo Testamento.",
   },
   {
     id: "cg-m-027",
