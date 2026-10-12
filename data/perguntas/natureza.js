@@ -226,9 +226,9 @@ adicionarPerguntas([
     categoria: "natureza",
     dificuldade: "facil",
     enunciado: "O que é um animal carnívoro?",
-    alternativas: ["Se alimenta apenas de vegetais", "Se alimenta apenas de carne", "Se alimenta de carne e vegetais", "Se alimenta de insetos apenas"],
-    correta: "Se alimenta apenas de carne",
-    explicacao: "Animais carnívoros obtêm nutrientes primariamente do consumo de carne.",
+    alternativas: ["Alimenta-se principalmente de plantas", "Alimenta-se principalmente de outros animais", "Produz alimento por fotossíntese", "Absorve apenas sais minerais do solo"],
+    correta: "Alimenta-se principalmente de outros animais",
+    explicacao: "Na classificação pela dieta, carnívoros alimentam-se principalmente de outros animais; isso inclui os insetívoros.",
   },
   {
     id: "an-f-026",
