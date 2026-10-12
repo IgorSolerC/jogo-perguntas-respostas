@@ -875,10 +875,10 @@ adicionarPerguntas([
     id: "an-m-039",
     categoria: "natureza",
     dificuldade: "media",
-    enunciado: "Qual mamífero marinho é conhecido como o maior peixe predador existente hoje?",
+    enunciado: "Qual é a maior espécie de peixe do mundo?",
     alternativas: ["Tubarão-branco", "Tubarão-baleia", "Orca", "Tubarão-martelo"],
     correta: "Tubarão-baleia",
-    explicacao: "O tubarão-baleia é o maior peixe do mundo (até 18m), mas alimenta-se por filtração de plâncton.",
+    explicacao: "O tubarão-baleia é um peixe cartilaginoso que se alimenta principalmente por filtração de plâncton e pequenos animais.",
   },
   {
     id: "an-m-040",
