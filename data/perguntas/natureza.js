@@ -1516,7 +1516,7 @@ adicionarPerguntas([
     id: "an-d-050",
     categoria: "natureza",
     dificuldade: "dificil",
-    enunciado: "Qual grande herbívoro africano possui mandíbulas adaptadas para pastar e é estatisticamente o mamífero silvestre que mais causa fatalidades humanas diretas na África?",
+    enunciado: "Qual grande herbívoro africano é semiaquático e possui olhos, orelhas e narinas na parte superior da cabeça?",
     alternativas: ["Hipopótamo", "Rinoceronte-negro", "Elefante-africano", "Búfalo-do-cabo"],
     correta: "Hipopótamo",
     explicacao: "Hipopótamos são extremamente territoriais e agressivos em defender cursos d'água.",
