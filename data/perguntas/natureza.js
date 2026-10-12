@@ -1345,10 +1345,10 @@ adicionarPerguntas([
     id: "an-d-031",
     categoria: "natureza",
     dificuldade: "dificil",
-    enunciado: "Qual cefalópode possui oito braços, sem o par adicional de tentáculos típico das lulas e dos chocos?",
+    enunciado: "Qual destes animais tem oito braços e nenhum par de tentáculos extras?",
     alternativas: ["Lula", "Polvo", "Choco (Sépia)", "Náutilo"],
     correta: "Polvo",
-    explicacao: "Polvos possuem neurônios distribuídos pelos braços e mudam de cor e textura via cromatóforos e papilas.",
+    explicacao: "O polvo tem oito braços; lulas e chocos têm também dois tentáculos mais longos.",
   },
   {
     id: "an-d-032",
