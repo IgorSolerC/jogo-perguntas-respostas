@@ -1345,10 +1345,10 @@ adicionarPerguntas([
     id: "cg-d-028",
     categoria: "geral",
     dificuldade: "dificil",
-    enunciado: "Qual é o valor exato da aceleração da gravidade média na superfície terrestre padronizado pela CGPM?",
+    enunciado: "Qual é o valor convencional da aceleração padrão da gravidade, adotado pela CGPM em 1901?",
     alternativas: ["9,80665 m/s²", "9,81000 m/s²", "9,78032 m/s²", "9,83210 m/s²"],
     correta: "9,80665 m/s²",
-    explicacao: "A Terceira Confederação Geral de Pesos e Medidas adotou o valor padrão de 9,80665 m/s² em 1901.",
+    explicacao: "A 3ª Conferência Geral de Pesos e Medidas adotou 9,80665 m/s² como valor padrão; a gravidade local varia com a latitude e a altitude.",
   },
   {
     id: "cg-d-029",
