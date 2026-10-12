@@ -1354,10 +1354,10 @@ adicionarPerguntas([
     id: "an-d-032",
     categoria: "natureza",
     dificuldade: "dificil",
-    enunciado: "Qual é o único molusco cefalópode vivo que ainda conserva uma concha calcária externa espiralada com câmaras de gás?",
+    enunciado: "Que parente do polvo tem uma concha espiral dividida em câmaras?",
     alternativas: ["Lula-gigante", "Polvo", "Náutilo", "Argonauta"],
     correta: "Náutilo",
-    explicacao: "O náutilo possui uma concha com câmaras e regula a flutuabilidade principalmente removendo ou admitindo líquido nessas câmaras através do sifúnculo.",
+    explicacao: "As câmaras da concha ajudam o náutilo a flutuar.",
   },
   {
     id: "an-d-033",
