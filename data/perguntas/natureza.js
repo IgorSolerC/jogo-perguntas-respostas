@@ -1345,7 +1345,7 @@ adicionarPerguntas([
     id: "an-d-031",
     categoria: "natureza",
     dificuldade: "dificil",
-    enunciado: "Qual molusco cefalópode sem concha externa é considerado o invertebrado mais inteligente e possui camuflagem em milissegundos?",
+    enunciado: "Qual cefalópode possui oito braços, sem o par adicional de tentáculos típico das lulas e dos chocos?",
     alternativas: ["Lula", "Polvo", "Choco (Sépia)", "Náutilo"],
     correta: "Polvo",
     explicacao: "Polvos possuem neurônios distribuídos pelos braços e mudam de cor e textura via cromatóforos e papilas.",
