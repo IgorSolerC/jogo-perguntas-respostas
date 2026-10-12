@@ -1534,10 +1534,10 @@ adicionarPerguntas([
     id: "an-d-052",
     categoria: "natureza",
     dificuldade: "dificil",
-    enunciado: "Qual tubarão habita rios de água doce devido à sua capacidade de osmorregulação retendo ureia e sal no sangue?",
+    enunciado: "Qual destes tubarões consegue viver tanto no mar quanto em rios de água doce?",
     alternativas: ["Tubarão-cabeça-chata (Bull shark)", "Tubarão-branco", "Tubarão-tigre", "Tubarão-mako"],
     correta: "Tubarão-cabeça-chata (Bull shark)",
-    explicacao: "O tubarão-cabeça-chata consegue navegar rios como o Amazonas e o Mississipi por longas distâncias.",
+    explicacao: "O tubarão-cabeça-chata ajusta a eliminação e a retenção de sais e outros solutos, permitindo sua presença em águas com salinidades diferentes.",
   },
   {
     id: "an-d-053",
