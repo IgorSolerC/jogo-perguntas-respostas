@@ -325,8 +325,8 @@ adicionarPerguntas([
     categoria: "natureza",
     dificuldade: "facil",
     enunciado: "Qual alimento constitui a quase totalidade da dieta do panda-gigante?",
-    alternativas: ["Bambal", "Folhas de eucalipto", "Bambual (bambu)", "Frutas tropicais"],
-    correta: "Bambual (bambu)",
+    alternativas: ["Carne de peixe", "Folhas de eucalipto", "Bambu", "Algas marinhas"],
+    correta: "Bambu",
     explicacao: "O panda-gigante dedica cerca de 12 horas por dia mastigando caules e folhas de bambu.",
   },
   {
