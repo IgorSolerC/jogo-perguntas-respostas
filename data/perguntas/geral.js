@@ -749,10 +749,10 @@ adicionarPerguntas([
     id: "cg-m-024",
     categoria: "geral",
     dificuldade: "media",
-    enunciado: "Em qual país foi cultivada a árvore escolhida para o Natal de 2024 do Rockefeller Center, em Nova York?",
+    enunciado: "De qual país vem a tradicional árvore de Natal da Trafalgar Square, em Londres?",
     alternativas: ["Noruega", "Estados Unidos", "Canadá", "Finlândia"],
-    correta: "Estados Unidos",
-    explicacao: "A árvore de 2024 veio de West Stockbridge, no estado norte-americano de Massachusetts.",
+    correta: "Noruega",
+    explicacao: "A cidade de Oslo envia a árvore em agradecimento à ajuda britânica na Segunda Guerra Mundial.",
   },
   {
     id: "cg-m-025",
