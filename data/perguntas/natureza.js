@@ -1357,7 +1357,7 @@ adicionarPerguntas([
     enunciado: "Qual é o único molusco cefalópode vivo que ainda conserva uma concha calcária externa espiralada com câmaras de gás?",
     alternativas: ["Lula-gigante", "Polvo", "Náutilo", "Argonauta"],
     correta: "Náutilo",
-    explicacao: "O náutilo habita o Indo-Pacífico e regula sua flutuabilidade injetando ou removendo gás de suas câmaras oceânicas.",
+    explicacao: "O náutilo possui uma concha com câmaras e regula a flutuabilidade principalmente removendo ou admitindo líquido nessas câmaras através do sifúnculo.",
   },
   {
     id: "an-d-033",
