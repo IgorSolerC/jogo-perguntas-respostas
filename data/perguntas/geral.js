@@ -162,10 +162,10 @@ adicionarPerguntas([
     id: "cg-f-018",
     categoria: "geral",
     dificuldade: "facil",
-    enunciado: "Qual é a moeda comum dos países da União Europeia que integram a zona do euro?",
+    enunciado: "Qual é a moeda usada na França, na Alemanha e na Espanha?",
     alternativas: ["Dólar", "Libra", "Euro", "Franco"],
     correta: "Euro",
-    explicacao: "O euro é a moeda comum da zona do euro; nem todos os países da União Europeia o adotam.",
+    explicacao: "Esses países usam o euro, assim como vários outros países europeus.",
   },
   {
     id: "cg-f-019",
