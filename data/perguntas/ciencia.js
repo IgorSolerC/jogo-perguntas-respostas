@@ -911,10 +911,10 @@ adicionarPerguntas([
     id: "ct-m-043",
     categoria: "ciencia",
     dificuldade: "media",
-    enunciado: "Como é chamada a camada de gases estufa que retém calor refletido pela superfície terrestre?",
+    enunciado: "Como se chama o processo natural em que gases da atmosfera absorvem e reemitem parte da radiação infravermelha emitida pela superfície terrestre?",
     alternativas: ["Efeito estufa", "Inversão térmica", "Camada de ozônio", "Radiação ultravioleta"],
     correta: "Efeito estufa",
-    explicacao: "O efeito estufa é um processo natural que mantém a Terra em temperaturas habitáveis.",
+    explicacao: "O efeito estufa reduz a perda de calor para o espaço e ajuda a manter a Terra em temperaturas habitáveis.",
   },
   {
     id: "ct-m-044",
