@@ -1516,10 +1516,10 @@ adicionarPerguntas([
     id: "an-d-050",
     categoria: "natureza",
     dificuldade: "dificil",
-    enunciado: "Qual grande herbívoro africano é semiaquático e possui olhos, orelhas e narinas na parte superior da cabeça?",
+    enunciado: "Qual grande animal africano passa boa parte do dia dentro da água?",
     alternativas: ["Hipopótamo", "Rinoceronte-negro", "Elefante-africano", "Búfalo-do-cabo"],
     correta: "Hipopótamo",
-    explicacao: "Hipopótamos são extremamente territoriais e agressivos em defender cursos d'água.",
+    explicacao: "O hipopótamo passa muito tempo na água e sai para pastar, geralmente à noite.",
   },
   {
     id: "an-d-051",
