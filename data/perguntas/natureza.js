@@ -1535,9 +1535,9 @@ adicionarPerguntas([
     categoria: "natureza",
     dificuldade: "dificil",
     enunciado: "Qual destes tubarões consegue viver tanto no mar quanto em rios de água doce?",
-    alternativas: ["Tubarão-cabeça-chata (Bull shark)", "Tubarão-branco", "Tubarão-tigre", "Tubarão-mako"],
-    correta: "Tubarão-cabeça-chata (Bull shark)",
-    explicacao: "O tubarão-cabeça-chata ajusta a eliminação e a retenção de sais e outros solutos, permitindo sua presença em águas com salinidades diferentes.",
+    alternativas: ["Tubarão-cabeça-chata", "Tubarão-branco", "Tubarão-tigre", "Tubarão-mako"],
+    correta: "Tubarão-cabeça-chata",
+    explicacao: "Ele vive no mar e também consegue entrar em rios como o Amazonas.",
   },
   {
     id: "an-d-053",
