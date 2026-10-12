@@ -342,7 +342,7 @@ adicionarPerguntas([
     id: "cg-f-038",
     categoria: "geral",
     dificuldade: "facil",
-    enunciado: "Qual é o principal gás que os seres humanos inalam para sobreviver?",
+    enunciado: "Qual gás do ar é utilizado pelas células humanas na respiração aeróbia?",
     alternativas: ["Nitrogênio", "Oxigênio", "Hélio", "Metano"],
     correta: "Oxigênio",
     explicacao: "O oxigênio é indispensável para a respiração celular humana.",
