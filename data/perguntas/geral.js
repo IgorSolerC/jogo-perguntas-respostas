@@ -938,7 +938,7 @@ adicionarPerguntas([
     id: "cg-m-045",
     categoria: "geral",
     dificuldade: "media",
-    enunciado: "Qual é o triângulo que possui todos os três lados com medidas diferentes?",
+    enunciado: "Quanto às medidas dos lados, como se classifica um triângulo com os três lados diferentes?",
     alternativas: ["Isósceles", "Equilátero", "Escaleno", "Retângulo"],
     correta: "Escaleno",
     explicacao: "O triângulo escaleno é aquele cujos três lados têm comprimentos distintos.",
