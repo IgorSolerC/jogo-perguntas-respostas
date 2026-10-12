@@ -1444,10 +1444,10 @@ adicionarPerguntas([
     id: "an-d-042",
     categoria: "natureza",
     dificuldade: "dificil",
-    enunciado: "Como é chamado o veneno das abelhas-melíferas, injetado pelo ferrão?",
+    enunciado: "Como se chama o veneno da abelha, aplicado pelo ferrão?",
     alternativas: ["Apitoxina", "Tetrodotoxina", "Bufotoxina", "Crotoxina"],
     correta: "Apitoxina",
-    explicacao: "A apitoxina é uma mistura complexa de proteínas e peptídeos, como a melitina e a fosfolipase A2.",
+    explicacao: "A apitoxina é o veneno que a abelha usa para se defender.",
   },
   {
     id: "an-d-043",
