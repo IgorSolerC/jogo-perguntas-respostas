@@ -1273,10 +1273,10 @@ adicionarPerguntas([
     id: "an-d-023",
     categoria: "natureza",
     dificuldade: "dificil",
-    enunciado: "Qual mamífero marinho possui a pelagem mais densa do reino animal, com até 150 mil fios por cm²?",
+    enunciado: "Qual mamífero marinho tem a pelagem mais densa do mundo?",
     alternativas: ["Urso-polar", "Lontra-marinha", "Foca-harpa", "Morsa"],
     correta: "Lontra-marinha",
-    explicacao: "A lontra-marinha depende de sua pelagem muito densa, em vez de uma camada espessa de gordura, para conservar calor.",
+    explicacao: "A pelagem da lontra-marinha funciona como um casaco que ajuda a mantê-la aquecida.",
   },
   {
     id: "an-d-024",
