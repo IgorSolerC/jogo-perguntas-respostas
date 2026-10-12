@@ -743,7 +743,7 @@ adicionarPerguntas([
     enunciado: "Qual astrônomo polonês formalizou o modelo heliocêntrico do Sistema Solar em 1543?",
     alternativas: ["Galileu Galilei", "Nicolau Copérnico", "Johannes Kepler", "Tycho Brahe"],
     correta: "Nicolau Copérnico",
-    explicacao: "Copérnico demonstrou matematicamente que a Terra e os planetas orbitam ao redor do Sol.",
+    explicacao: "Copérnico apresentou em 1543 um modelo matemático heliocêntrico, no qual a Terra e os demais planetas orbitam o Sol.",
   },
   {
     id: "ct-m-025",
