@@ -1561,7 +1561,7 @@ adicionarPerguntas([
     id: "an-d-055",
     categoria: "natureza",
     dificuldade: "dificil",
-    enunciado: "Qual é a única espécie de urso nativa de toda a América do Sul?",
+    enunciado: "Qual é a única espécie de urso atualmente nativa da América do Sul?",
     alternativas: ["Urso-de-óculos (Urso-andino)", "Urso-pardo", "Urso-negro", "Urso-perezoso"],
     correta: "Urso-de-óculos (Urso-andino)",
     explicacao: "O urso-de-óculos (Tremarctos ornatus) habita as florestas de neblina da Cordilheira dos Andes.",
