@@ -369,7 +369,7 @@ adicionarPerguntas([
     id: "cg-f-041",
     categoria: "geral",
     dificuldade: "facil",
-    enunciado: "Em qual estação do ano as folhas das árvores caducifólias costumam cair?",
+    enunciado: "Em regiões de clima temperado, em qual estação muitas árvores caducifólias perdem as folhas antes do inverno?",
     alternativas: ["Primavera", "Outono", "Verão", "Inverno"],
     correta: "Outono",
     explicacao: "No outono, muitas árvores perdem suas folhas para economizar energia para o inverno.",
