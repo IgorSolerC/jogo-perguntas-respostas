@@ -360,10 +360,10 @@ adicionarPerguntas([
     id: "an-f-040",
     categoria: "natureza",
     dificuldade: "facil",
-    enunciado: "Qual árvore é símbolo nacional do Brasil devido ao seu pigmento avermelhado histórico?",
-    alternativas: ["Ipê-amarelo", "Pau-brasil", "Castanheira", "Serigueira"],
+    enunciado: "Qual árvore deu nome ao Brasil?",
+    alternativas: ["Ipê-amarelo", "Pau-brasil", "Castanheira", "Seringueira"],
     correta: "Pau-brasil",
-    explicacao: "O pau-brasil deu nome ao país e foi explorado pela extração de um corante vermelho de sua madeira.",
+    explicacao: "Da madeira do pau-brasil era extraído um corante vermelho muito valorizado.",
   },
   {
     id: "an-f-041",
