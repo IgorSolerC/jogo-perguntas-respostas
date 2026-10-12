@@ -1028,10 +1028,10 @@ adicionarPerguntas([
     id: "CIE-M-04",
     categoria: "ciencia",
     dificuldade: "media",
-    enunciado: "Quantos ossos tem o corpo de um adulto?",
+    enunciado: "Quantos ossos tem normalmente o esqueleto humano adulto?",
     alternativas: ["206", "106", "150", "300"],
     correta: "206",
-    explicacao: "O adulto tem 206 ossos. O bebê nasce com mais, e alguns se juntam.",
+    explicacao: "O número convencional é 206 ossos, embora existam variações anatômicas entre pessoas.",
   },
   {
     id: "CIE-M-06",
