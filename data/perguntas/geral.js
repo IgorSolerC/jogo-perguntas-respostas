@@ -1318,10 +1318,10 @@ adicionarPerguntas([
     id: "cg-d-025",
     categoria: "geral",
     dificuldade: "dificil",
-    enunciado: "Qual destas letras não aparece nos símbolos oficiais dos 118 elementos químicos?",
+    enunciado: "Qual destas letras não aparece nos símbolos da tabela periódica?",
     alternativas: ["J", "W", "X", "Z"],
     correta: "J",
-    explicacao: "J não aparece nos símbolos oficiais; W é o tungstênio, X aparece em Xe e Z aparece em Zn e Zr. Q também não é usado nesses símbolos.",
+    explicacao: "A letra J não aparece no símbolo de nenhum elemento químico.",
   },
   {
     id: "cg-d-026",
