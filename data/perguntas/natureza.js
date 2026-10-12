@@ -1291,10 +1291,10 @@ adicionarPerguntas([
     id: "an-d-025",
     categoria: "natureza",
     dificuldade: "dificil",
-    enunciado: "Qual ordem de insetos compreende os besouros, constituindo o grupo de seres vivos com maior número de espécies descritas?",
+    enunciado: "Qual ordem de insetos inclui os besouros?",
     alternativas: ["Lepidoptera", "Coleoptera", "Hymenoptera", "Diptera"],
     correta: "Coleoptera",
-    explicacao: "Coleoptera representa cerca de 25% de todas as formas de vida animal conhecidas no planeta.",
+    explicacao: "Coleoptera é a ordem dos besouros, um dos grupos animais com maior número de espécies descritas.",
   },
   {
     id: "an-d-026",
