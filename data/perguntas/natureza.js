@@ -1465,7 +1465,7 @@ adicionarPerguntas([
     enunciado: "Qual primata noturno da Indonésia possui olhos gigantescos fixos na órbita, sendo cada olho maior que seu cérebro?",
     alternativas: ["Tarsius (Társio)", "Loris-lento", "Aye-aye", "Galago"],
     correta: "Tarsius (Társio)",
-    explicacao: "O társio possui adaptações oculares para visão noturna absoluta e gira o pescoço 180°.",
+    explicacao: "Társios possuem olhos muito grandes adaptados à visão em pouca luz e podem girar bastante a cabeça para compensar a pouca mobilidade dos olhos.",
   },
   {
     id: "an-d-045",
