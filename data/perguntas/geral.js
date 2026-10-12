@@ -162,10 +162,10 @@ adicionarPerguntas([
     id: "cg-f-018",
     categoria: "geral",
     dificuldade: "facil",
-    enunciado: "Qual é a moeda oficial da União Europeia usada por 20 países?",
+    enunciado: "Qual é a moeda comum dos países da União Europeia que integram a zona do euro?",
     alternativas: ["Dólar", "Libra", "Euro", "Franco"],
     correta: "Euro",
-    explicacao: "O Euro é a moeda comum adotada pela maioria dos países membros da União Europeia.",
+    explicacao: "O euro é a moeda comum da zona do euro; nem todos os países da União Europeia o adotam.",
   },
   {
     id: "cg-f-019",
