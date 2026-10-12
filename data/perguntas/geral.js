@@ -830,7 +830,7 @@ adicionarPerguntas([
     id: "cg-m-033",
     categoria: "geral",
     dificuldade: "media",
-    enunciado: "Segundo as estimativas da ONU, qual país ultrapassou a China em população em 2023?",
+    enunciado: "Qual país ultrapassou a China em população em 2023?",
     alternativas: ["China", "Índia", "Estados Unidos", "Indonésia"],
     correta: "Índia",
     explicacao: "A Índia ultrapassou a China como o país mais populoso do planeta em 2023.",
