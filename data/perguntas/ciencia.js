@@ -1417,10 +1417,10 @@ adicionarPerguntas([
     id: "ct-d-041",
     categoria: "ciencia",
     dificuldade: "dificil",
-    enunciado: "Qual é a teoria cosmológica predominante que descreve a origem e expansão inicial do universo a partir de um estado denso e quente?",
+    enunciado: "Qual teoria descreve um universo que começou muito quente e denso e vem se expandindo?",
     alternativas: ["Teoria do Estado Estacionário", "Teoria do Big Bang", "Modelo Multiverso", "Cosmologia Cíclica"],
     correta: "Teoria do Big Bang",
-    explicacao: "O modelo do Big Bang descreve a expansão e o resfriamento do universo a partir de um estado inicial muito quente e denso, há cerca de 13,8 bilhões de anos.",
+    explicacao: "Segundo o Big Bang, o universo se expandiu e esfriou ao longo de bilhões de anos.",
   },
   {
     id: "ct-d-042",
