@@ -234,10 +234,10 @@ adicionarPerguntas([
     id: "ct-f-026",
     categoria: "ciencia",
     dificuldade: "facil",
-    enunciado: "Qual é o gás necessário para a combustão (fogo)?",
+    enunciado: "Qual gás do ar atua como comburente na queima de uma vela?",
     alternativas: ["Nitrogênio", "Oxigênio", "Hélio", "Dióxido de Carbono"],
     correta: "Oxigênio",
-    explicacao: "O oxigênio atua como comburente essencial na maioria das reações de combustão.",
+    explicacao: "Na queima de uma vela, a parafina reage com o oxigênio do ar, liberando energia.",
   },
   {
     id: "ct-f-027",
